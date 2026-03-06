@@ -20,6 +20,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         # Cesta na Wedosu je obvykle /www/domains/tvojedomena.cz/
         # Pokud nahráváš jen do /www/, uprav to níže:
-        server-dir: /www/domains/tvojenazev.cz/ 
+        server-dir: /www/domains/sdhbor.cz/ 
         # Pokud máš soubory v kořenovém adresáři na GitHubu, nech ./
         local-dir: ./
