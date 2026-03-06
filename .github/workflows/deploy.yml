@@ -1,0 +1,25 @@
+name: Nahrání na Wedos
+on:
+  push:
+    branches:
+      - main # Tady zkontroluj, jestli se tvoje hlavní větev jmenuje "main" nebo "master"
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # Cesta na Wedosu je obvykle /www/domains/tvojedomena.cz/
+        # Pokud nahráváš jen do /www/, uprav to níže:
+        server-dir: /www/domains/tvojenazev.cz/ 
+        # Pokud máš soubory v kořenovém adresáři na GitHubu, nech ./
+        local-dir: ./
