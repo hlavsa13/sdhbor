@@ -128,7 +128,7 @@
 
 <script>
   var allResults = [
-    { year: '2019', yearLabel: '2019', isWin: true, title: 'Závod Mezi Stromy', desc: 'Kategorie: Starší žáci — na šestém ročníku dětské soutěže v požárním útoku v obecním parku (rekordních 15 družstev) zvítězil tým SDH Bor; v kategorii mladších žáků skončil druhý za ČHJ Nalžovice.', time: null, video: 'https://youtu.be/f-YlCLLP4tE?si=g7qupxKQQU_LJQAl' },
+    { year: '2019', yearLabel: '2019', isWin: true, title: 'Závod Mezi Stromy', desc: 'Kategorie: Starší žáci — na šestém ročníku dětské soutěže v požárním útoku v obecním parku (rekordních 15 družstev) zvítězil tým SDH Bor; v kategorii mladších žáků skončil druhý za ČHJ Nalžovice.', time: null, video: 'https://youtu.be/f-YlCLLP4tE?si=g7qupxKQQU_LJQAl', detail: 'mezi-stromy-2019.html' },
     { year: '2018', yearLabel: '2018', isWin: true, title: 'OHS Nedrahovice', desc: 'Kategorie: Ženy + Děti — kombinovaný tým žen a dětí obsadil první místo.', time: null },
     { year: '2018', yearLabel: '2018', isWin: false, title: 'OHS Nedrahovice', desc: 'Kategorie: Muži — solidní výsledek mužského týmu na okrskovém závodě.', time: null },
     { year: '2017', yearLabel: '2017', isWin: true, title: 'Závod 111 let', desc: 'Kategorie: Muži', time: '47,42 s' },
@@ -191,7 +191,10 @@
         '<div class="result-content">' +
           '<span style="font-weight:600;font-size:15px;">' + escapeHtml(r.title) + '</span>' +
           '<span style="font-size:13px;color:#7A6E58;">' + escapeHtml(r.desc) + '</span>' +
-          (r.video ? '<a href="' + r.video + '" target="_blank" rel="noopener" class="mono" style="color:var(--ochre-500);font-size:12px;font-weight:600;margin-top:2px;display:inline-flex;align-items:center;gap:4px;width:fit-content;">\u25B6 Video ze z\u00e1vodu</a>' : '') +
+          ((r.detail || r.video) ? '<div style="display:flex;gap:14px;margin-top:2px;">' +
+            (r.detail ? '<a href="' + r.detail + '" class="mono" style="color:var(--navy-900);font-size:12px;font-weight:600;border-bottom:1px solid var(--navy-900);">Detail \u2192</a>' : '') +
+            (r.video ? '<a href="' + r.video + '" target="_blank" rel="noopener" class="mono" style="color:var(--ochre-500);font-size:12px;font-weight:600;">\u25B6 Video</a>' : '') +
+          '</div>' : '') +
         '</div>' +
         (r.time ? '<span class="mono time-col" style="color:var(--navy-900);font-size:14px;">' + escapeHtml(r.time) + '</span>' : '');
       list.appendChild(row);
