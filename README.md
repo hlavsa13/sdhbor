@@ -27,4 +27,4 @@ Statické HTML stránky, připravené k nahrání do GitHub repozitáře (např.
 
 Každá detailní stránka soutěže nebo akce má vlastní složku `images/<název-stránky>/` (název odpovídá souboru HTML bez přípony, např. `images/zelezny-srot-2018/` pro `zelezny-srot-2018.html`). Obrázky úvodní stránky jsou ve složce `images/uvod/`.
 
-Prázdné složky obsahují soubor `.gitkeep`, aby je GitHub zachoval. Po přidání fotek ho lze smazat.
+Prázdné složky obsahují soubor `SEM-FOTKY.txt`, aby je GitHub zachoval (prázdné složky neukládá). Po přidání fotek ho lze smazat.
