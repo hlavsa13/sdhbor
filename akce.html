@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>SDH Bor u Sedlčan — Akce a brigády</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 </head>
@@ -28,6 +29,15 @@
   .card{background:#FFFFFF;border:1px solid #E4DCC9;}
   .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
   .tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--ochre-500);text-transform:uppercase;}
+  .brig-row{border-radius:2px;padding:22px 24px;display:flex;gap:24px;align-items:flex-start;}
+  .brig-date{width:130px;flex-shrink:0;}
+  .brig-stats{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;}
+  .ev-row{border-radius:2px;padding:20px 24px;display:flex;gap:24px;align-items:flex-start;}
+  @media (max-width:640px){
+    .brig-row,.ev-row{flex-wrap:wrap;gap:8px 16px;}
+    .brig-date{width:auto;}
+    .brig-stats{align-items:flex-start;flex-direction:row;gap:10px;align-items:baseline;}
+  }
 </style>
 
 <div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
@@ -140,56 +150,184 @@
     </div>
   </section>
 
-  <!-- Brigádnická činnost -->
+  <!-- Brigády a akce -->
   <section style="width:100%;background:var(--navy-700);">
     <div style="max-width:1280px;margin:0 auto;padding:72px 32px 88px;display:flex;flex-direction:column;gap:32px;">
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <div class="section-label">Práce pro obec</div>
-        <h2 style="font-size:30px;color:var(--ivory);">Brigádnická činnost</h2>
+        <div class="section-label">Práce pro obec a život v obci</div>
+        <h2 style="font-size:30px;color:var(--ivory);">Brigády a proběhlé akce</h2>
         <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;max-width:700px;font-style:italic;">„Sbor vykonává brigádnické práce v obci nejen v době nouze, ale i preventivně — údržba, příprava a pomoc spoluobčanům."</p>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
 
-        <div class="plate" style="border-radius:2px;padding:22px 24px;display:flex;gap:24px;align-items:flex-start;">
-          <div style="width:110px;flex-shrink:0;">
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">18. 9. 2018</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Výstavba autobusových zastávek</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">V Boru začala výstavba autobusových zastávek.</span>
+            <a href="zastavky-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2018</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Letní posezení</span>
+            <a href="letni-posezeni-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">12. 5. 2018</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den — 100 let od vzniku republiky</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Slavnostní den ke 100. výročí vzniku Československé republiky spojený s dětským dnem a večerní zábavou. Na stanovištích soutěžilo 105 dětí.</span>
+            <a href="detsky-den-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
             <span class="mono" style="color:var(--ochre-400);font-size:14px;">14. 1. 2018</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
           </div>
-          <div style="flex-grow:1;display:flex;flex-direction:column;gap:6px;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Odvoz šrotu</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pešta V. ml., Spilka V. ml., Všetečka J., Pešta J.</span>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Sběr železného šrotu</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Sběr železného šrotu v Boru a Rudolci, zároveň byla vyčištěna vana na šrot (10:00–11:30). Účast: Budka Lubomír, Neužil Jiří st., Pešta Vladimír ml., Roškot Luděk, Roškot Luděk ml., Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Štemberk Josef, Všetečka Jan, Zemánek Martin.</span>
+            <a href="zelezny-srot-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;">
+          <div class="brig-stats">
             <span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">16,5 h</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">4 účastníci</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">11 účastníků</span>
           </div>
         </div>
 
-        <div class="plate" style="border-radius:2px;padding:22px 24px;display:flex;gap:24px;align-items:flex-start;">
-          <div style="width:110px;flex-shrink:0;">
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
             <span class="mono" style="color:var(--ochre-400);font-size:14px;">13. 1. 2018</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
           </div>
-          <div style="flex-grow:1;display:flex;flex-direction:column;gap:6px;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Příprava kamení pro čekárnu</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pešta V. ml., Spilka V. ml., Všetečka J., Pešta J.</span>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Odvoz a třídění kamenů</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Odvoz kamení z Nedrahovic na stavbu čekáren a třídění kamenů (9:00–11:30). Účast: Budka Lubomír, Pešta Josef, Pešta Vladimír ml., Rataj Luboš, Roškot Luděk, Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Spilka Vladimír ml., Spilka Vladimír nejml., Všetečka Jan, Zemánek Martin.</span>
+            <a href="kameni-cekarny-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;">
+          <div class="brig-stats">
             <span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">30 h</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">4 účastníci</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">12 účastníků</span>
           </div>
         </div>
 
-        <div class="plate" style="border-radius:2px;padding:22px 24px;display:flex;gap:24px;align-items:flex-start;">
-          <div style="width:110px;flex-shrink:0;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">Pravidelně</span>
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">30. 4. 2017</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
           </div>
-          <div style="flex-grow:1;display:flex;flex-direction:column;gap:6px;">
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Čarodějnice</span>
+            <a href="carodejnice-2017.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2014</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den v Boru</span>
+            <a href="detsky-den-2014.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">29. 6. 2013</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den</span>
+            <a href="detsky-den-2013.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2. 6. 2013</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Povodeň</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pomoc sboru při povodni v Boru.</span>
+            <a href="povoden-2013.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">6. 10. 2012</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Farmářské slavnosti</span>
+            <a href="farmarske-slavnosti-2012.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">26. 5. 2012</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den</span>
+            <a href="detsky-den-2012.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">20. 9. 2005</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Nové nástěnky v hasičárně</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Instalace nových nástěnek v hasičárně.</span>
+            <a href="nastenky-hasicarna-2005.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">13. 8. a 10. 9. 2005</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
+            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Stavba krbu</span>
+            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Stavba venkovního krbu.</span>
+            <a href="stavba-krbu-2005.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
+          </div>
+        </div>
+
+        <div class="plate brig-row">
+          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
+            <span class="mono" style="color:var(--ochre-400);font-size:14px;">Pravidelně</span>
+            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
+          </div>
+          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
             <span style="color:var(--ivory);font-weight:600;font-size:16px;">Údržba zbrojnice a okolí</span>
             <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pravidelné úklidové a údržbové práce u zbrojnice a v okolí — sekání trávy, úklid, drobné opravy.</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;">
-            <span class="mono" style="color:var(--ivory-dim);font-size:18px;font-weight:600;">—</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">celý sbor</span>
+            <a href="udrzba-zbrojnice.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
           </div>
         </div>
 

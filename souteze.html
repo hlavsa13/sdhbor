@@ -32,7 +32,8 @@
   .result-row{border-radius:2px;padding:20px 24px;display:flex;align-items:center;gap:20px;}
   .stat-grid{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));}
   .badge-win{width:78px;flex-shrink:0;}
-  .year-col{width:56px;}
+  .year-col{width:88px;flex-shrink:0;}
+  .time-col{flex-shrink:0;}
   .result-content{flex-grow:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
   @media (max-width:640px){
     .stat-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
@@ -129,21 +130,25 @@
 <script>
   var allResults = [
     { year: '2019', yearLabel: '2019', isWin: true, title: 'Závod Mezi Stromy', desc: 'Kategorie: Starší žáci — na šestém ročníku dětské soutěže v požárním útoku v obecním parku (rekordních 15 družstev) zvítězil tým SDH Bor; v kategorii mladších žáků skončil druhý za ČHJ Nalžovice.', time: null, video: 'https://youtu.be/f-YlCLLP4tE?si=g7qupxKQQU_LJQAl', detail: 'mezi-stromy-2019.html' },
-    { year: '2018', yearLabel: '2018', isWin: true, title: 'OHS Nedrahovice', desc: 'Kategorie: Ženy + Děti — kombinovaný tým žen a dětí obsadil první místo.', time: null },
-    { year: '2018', yearLabel: '2018', isWin: false, title: 'OHS Nedrahovice', desc: 'Kategorie: Muži — solidní výsledek mužského týmu na okrskovém závodě.', time: null },
-    { year: '2017', yearLabel: '2017', isWin: true, title: 'Závod 111 let', desc: 'Kategorie: Muži', time: '47,42 s' },
-    { year: '2017', yearLabel: '2017', isWin: true, title: 'OHS Dobrošovice', desc: 'Kategorie: Ženy', time: '28,68 s' },
-    { year: '2017', yearLabel: '2017', isWin: false, title: 'OHS Dobrošovice', desc: 'Kategorie: Muži — mužský tým závodil na okrskovém závodě v Dobrošovicích.', time: null },
-    { year: '2016', yearLabel: '2016', isWin: false, title: 'OHS Okrsek', desc: 'Kategorie: Ženy — ženský tým se aktivně účastnil okrskových soutěží.', time: null },
-    { year: '2016', yearLabel: '2016', isWin: false, title: 'OHS Okrsek', desc: 'Kategorie: Muži — mužské družstvo prokázalo konzistentní výkonnost.', time: null },
-    { year: '2015', yearLabel: '2015', isWin: false, title: 'Okrsková soutěž', desc: 'Kategorie: Muži — účast na okrskových závodech, příprava na sezónu 2016.', time: null },
-    { year: '2015', yearLabel: '2015', isWin: false, title: 'Okrsková soutěž', desc: 'Kategorie: Ženy — ženské družstvo pokračovalo ve svém rozvoji.', time: null },
-    { year: '2006–2014', yearLabel: '2007', isWin: true, title: 'OHS Bor', desc: 'Kategorie: Muži — domácí závod, výborný čas.', time: '25,12 s' },
-    { year: '2006–2014', yearLabel: '2006–2014', isWin: false, title: 'Okrskové a oblastní závody', desc: 'Kategorie: Muži, Ženy — sbor se pravidelně účastnil okrskových soutěží ve všech dostupných kategoriích.', time: null },
-    { year: '2006–2014', yearLabel: '2006–2014', isWin: false, title: 'Hasičský sport v obci', desc: 'Kategorie: Mládež — rozvoj mládežnického oddílu a jeho soutěžních aktivit v tomto období.', time: null }
+      { year: '2019', yearLabel: '2019', isWin: false, title: 'Noční soutěž Dobrošovka Cup', desc: 'Noční hasičská soutěž v Dobrošovicích, 8. 6. 2019.', time: null, detail: 'dobrosovka-cup-2019.html' },
+      { year: '2019', yearLabel: '2019', isWin: false, title: 'OHS Martinice', desc: 'Okrsková soutěž 25. 5. 2019, dvanáct družstev ve dvoukolovém požárním útoku. SDH Bor obsadil 2. místo v kategorii žen i dětí.', time: null, detail: 'ohs-martinice-2019.html' },
+      { year: '2018', yearLabel: '2018', isWin: false, title: 'Martinická osma', desc: '4. ročník soutěže v požárním útoku v Zadních Boudách, 22. 9. 2018. Mládež: 2. místo SDH Bor A a 3. místo SDH Bor B; ženy PS 12: 3. místo SDH Bor.', time: null, detail: 'martinicka-osma-2018.html' },
+      { year: '2018', yearLabel: '2018', isWin: true, title: 'Mezi stromy', desc: 'Kategorie: Mladší žáci — na pátém ročníku dětské soutěže v požárním útoku v Jesenici (15. 9. 2018) zvítězilo družstvo SDH Bor u Sedlčan.', time: null, detail: 'mezi-stromy-2018.html' },
+      { year: '2018', yearLabel: '2018', isWin: true, title: 'OHS Nedrahovice', desc: 'Okrsková soutěž 16. 6. 2018, jedenáct družstev. SDH Bor zvítězil v kategorii žen i dětí.', time: null, detail: 'ohs-nedrahovice-2018.html' },
+      { year: '2017', yearLabel: '2017', isWin: false, title: 'Martinická osma', desc: '3. ročník soutěže v Zadních Boudách (23. 9. 2017), 27 družstev. SDH Bor v kategorii PS 12: ženy 2. místo, děti 3. místo, muži 4. místo.', time: null, detail: 'martinicka-osma-2017.html' },
+      { year: '2017', yearLabel: '2017', isWin: true, title: '111 let SDH Bor', desc: 'Soutěž k 111. výročí sboru (19. 8. 2017). Muži SDH Bor zvítězili, ženy a děti (Bor A) skončily druhé.', time: '47,42 s', detail: '111-let-sdh-bor-2017.html' },
+      { year: '2017', yearLabel: '2017', isWin: false, title: 'Noční soutěž Dobrošovka Cup', desc: 'Noční hasičská soutěž v Dobrošovicích, 3. 6. 2017.', time: null, detail: 'dobrosovka-cup-2017.html' },
+      { year: '2017', yearLabel: '2017', isWin: true, title: 'OHS Dobrošovice', desc: 'Okrsková soutěž 6. 5. 2017. Ženy SDH Bor zvítězily, muži skončili sedmí, dětská družstva Bor A a Bor AA čtvrtá a páté.', time: '28,68 s', detail: 'ohs-dobrosovice-2017.html' },
+      { year: '2016', yearLabel: '2016', isWin: false, title: 'OHS Mezné', desc: 'Okrsková hasičská soutěž v Mezném, 4. 6. 2016.', time: null, detail: 'ohs-mezne-2016.html' },
+      { year: '2015', yearLabel: '2015', isWin: false, title: 'OHS Jesenice', desc: 'Okrsková soutěž 9. 5. 2015. SDH Bor skončil pátý v kategorii mužů i mužů nad 35 let.', time: null, detail: 'ohs-jesenice-2015.html' },
+      { year: '2014', yearLabel: '2014', isWin: false, title: 'OHS Bor', desc: 'Okrsková soutěž v Boru 28. 6. 2014. Muži nad 35 let SDH Bor skončili třetí, muži sedmí.', time: null, detail: 'ohs-bor-2014.html' },
+      { year: '2013', yearLabel: '2013', isWin: false, title: 'OHS Kamenice', desc: 'Okrsková soutěž 8. 6. 2013. Muži SDH Bor skončili devátí.', time: null, detail: 'ohs-kamenice-2013.html' },
+      { year: '2011', yearLabel: '2011', isWin: false, title: 'OHS Nedrahovice', desc: 'Okrsková soutěž 4. 6. 2011. Družstva mužů SDH Bor II a Bor I skončila pátá a sedmá.', time: null, detail: 'ohs-nedrahovice-2011.html' },
+      { year: '2009', yearLabel: '2009', isWin: false, title: 'OHS Jesenice', desc: 'Okrsková soutěž 13. 6. 2009, požární útok a štafeta. Muži SDH Bor obsadili 2. místo.', time: '118,84 s', detail: 'ohs-jesenice-2009.html' },
+      { year: '2007', yearLabel: '2007', isWin: true, title: 'OHS Bor', desc: 'Domácí okrsková soutěž 9. 6. 2007. Muži SDH Bor zvítězili.', time: '25,12 s', detail: 'ohs-bor-2007.html' },
   ];
 
-  var yearOptions = ['Vše', '2019', '2018', '2017', '2016', '2015', '2006–2014'];
+  var yearOptions = ['Vše', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2011', '2009', '2007'];
   var selectedYear = 'Vše';
 
   function escapeHtml(s) {

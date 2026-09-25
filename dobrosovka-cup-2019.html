@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>SDH Bor u Sedlčan — Dobrošovka Cup 2019</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+  :root{
+    --navy-900:#0A121D;
+    --navy-800:#0F1B29;
+    --navy-700:#152638;
+    --ochre-500:#D98A2B;
+    --ochre-400:#E7A652;
+    --ivory:#F3EEE2;
+    --ivory-dim:#B9C0C9;
+    --line:rgba(217,138,43,0.35);
+  }
+  body{margin:0;background:var(--ivory);font-family:'Inter',system-ui,sans-serif;color:var(--navy-900);}
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;letter-spacing:0.01em;margin:0;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  a{color:inherit;text-decoration:none;}
+  .navlink{color:var(--ivory-dim);font-size:14px;font-weight:500;letter-spacing:0.02em;}
+  .navlink:hover{color:var(--ochre-400);}
+  .plate{background:var(--navy-800);border:1px solid var(--line);}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  .win-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--navy-900);background:var(--ochre-500);padding:4px 10px;border-radius:2px;white-space:nowrap;}
+  .btn-primary{background:var(--ochre-500);color:var(--navy-900);}
+  .btn-primary:hover{background:var(--ochre-400);}
+  .results-grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:24px;}
+  @media (max-width:640px){ .results-grid{grid-template-columns:1fr;} }
+</style>
+
+<div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="width:100%;background:var(--navy-900);">
+    <div style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">Bor 3, Nedrahovice 264 01</div>
+      <a href="mailto:sdh.bor.nedrahovice@gmail.com" class="mono" style="color:var(--ivory-dim);font-size:12px;">sdh.bor.nedrahovice@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header (shared) -->
+  <header style="width:100%;background:var(--navy-900);border-bottom:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" style="display:flex;flex-direction:column;line-height:1.15;">
+        <span style="color:var(--ochre-400);font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:0.02em;">SDH BOR</span>
+        <span class="mono" style="color:var(--ivory-dim);font-size:12px;">U SEDLČAN</span>
+      </a>
+      <nav style="display:flex;gap:28px;align-items:center;">
+        <a href="index.html" class="navlink">Úvod</a>
+        <a href="historie.html" class="navlink">Historie</a>
+        <a href="clenove.html" class="navlink">Seznam členů</a>
+        <a href="souteze.html" class="navlink" style="color:var(--ochre-400);">Soutěže</a>
+        <a href="akce.html" class="navlink">Akce</a>
+        <a href="index.html#kontakt" class="navlink">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section style="width:100%;background:var(--navy-900);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 40px;display:flex;flex-direction:column;gap:16px;">
+      <a href="souteze.html" class="mono" style="color:var(--ochre-400);font-size:12px;letter-spacing:0.08em;display:inline-flex;align-items:center;gap:6px;width:fit-content;">← Zpět na soutěže</a>
+      <div class="section-label">Soutěže · 2019</div>
+      <h1 style="color:var(--ivory);font-size:38px;font-weight:700;">Dobrošovka Cup — 8. 6. 2019</h1>
+      <p style="color:var(--ivory-dim);font-size:15px;">Noční hasičská soutěž</p>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <section style="width:100%;background:var(--ivory);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 48px;display:flex;flex-direction:column;gap:20px;">
+      <p style="font-size:15px;line-height:1.8;color:#3B3226;">Noční hasičská soutěž Dobrošovka Cup se konala 8. června 2019. Družstvo SDH Bor se jí zúčastnilo.</p>
+    </div>
+  </section>
+
+  <!-- Fotogalerie placeholder -->
+  <section style="width:100%;background:var(--ivory);">
+    <div style="max-width:900px;margin:0 auto;padding:0 32px 64px;display:flex;flex-direction:column;gap:16px;">
+      <div class="section-label">Fotogalerie</div>
+      <div class="plate" style="border-radius:2px;padding:8px;">
+        <div style="border:1px dashed var(--line);min-height:200px;display:flex;align-items:center;justify-content:center;">
+          <span class="mono" style="color:var(--ivory-dim);font-size:12px;letter-spacing:0.1em;">[FOTOGALERIE ZE ZÁVODU]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer style="width:100%;background:var(--navy-900);margin-top:auto;">
+    <div style="max-width:1280px;margin:0 auto;padding:40px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">SDH BOR U SEDLČAN © 1906–2026</div>
+      <a href="souteze.html" style="color:var(--ivory-dim);font-size:13px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;">Zpět na soutěže</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
