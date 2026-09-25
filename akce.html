@@ -38,6 +38,9 @@
     .brig-date{width:auto;}
     .brig-stats{align-items:flex-start;flex-direction:row;gap:10px;align-items:baseline;}
   }
+  .chip-dark{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 16px;border-radius:999px;border:1px solid rgba(185,192,201,0.35);color:var(--ivory-dim);background:transparent;cursor:pointer;}
+  .chip-dark:hover{border-color:var(--ochre-400);color:var(--ochre-400);}
+  .chip-dark.active{background:var(--ochre-500);color:var(--navy-900);border-color:var(--ochre-500);}
 </style>
 
 <div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
@@ -159,179 +162,9 @@
         <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;max-width:700px;font-style:italic;">„Sbor vykonává brigádnické práce v obci nejen v době nouze, ale i preventivně — údržba, příprava a pomoc spoluobčanům."</p>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:12px;">
+      <div id="year-filters" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"></div>
 
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">18. 9. 2018</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Výstavba autobusových zastávek</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">V Boru začala výstavba autobusových zastávek.</span>
-            <a href="zastavky-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2018</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Letní posezení</span>
-            <a href="letni-posezeni-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">12. 5. 2018</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den — 100 let od vzniku republiky</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Slavnostní den ke 100. výročí vzniku Československé republiky spojený s dětským dnem a večerní zábavou. Na stanovištích soutěžilo 105 dětí.</span>
-            <a href="detsky-den-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">14. 1. 2018</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Sběr železného šrotu</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Sběr železného šrotu v Boru a Rudolci, zároveň byla vyčištěna vana na šrot (10:00–11:30). Účast: Budka Lubomír, Neužil Jiří st., Pešta Vladimír ml., Roškot Luděk, Roškot Luděk ml., Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Štemberk Josef, Všetečka Jan, Zemánek Martin.</span>
-            <a href="zelezny-srot-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-          <div class="brig-stats">
-            <span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">16,5 h</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">11 účastníků</span>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">13. 1. 2018</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Odvoz a třídění kamenů</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Odvoz kamení z Nedrahovic na stavbu čekáren a třídění kamenů (9:00–11:30). Účast: Budka Lubomír, Pešta Josef, Pešta Vladimír ml., Rataj Luboš, Roškot Luděk, Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Spilka Vladimír ml., Spilka Vladimír nejml., Všetečka Jan, Zemánek Martin.</span>
-            <a href="kameni-cekarny-2018.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-          <div class="brig-stats">
-            <span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">30 h</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:11px;">12 účastníků</span>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">30. 4. 2017</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Čarodějnice</span>
-            <a href="carodejnice-2017.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2014</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den v Boru</span>
-            <a href="detsky-den-2014.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">29. 6. 2013</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den</span>
-            <a href="detsky-den-2013.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">2. 6. 2013</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Povodeň</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pomoc sboru při povodni v Boru.</span>
-            <a href="povoden-2013.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">6. 10. 2012</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Farmářské slavnosti</span>
-            <a href="farmarske-slavnosti-2012.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">26. 5. 2012</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">AKCE</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Dětský den</span>
-            <a href="detsky-den-2012.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">20. 9. 2005</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Nové nástěnky v hasičárně</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Instalace nových nástěnek v hasičárně.</span>
-            <a href="nastenky-hasicarna-2005.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">13. 8. a 10. 9. 2005</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Stavba krbu</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Stavba venkovního krbu.</span>
-            <a href="stavba-krbu-2005.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-        <div class="plate brig-row">
-          <div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">
-            <span class="mono" style="color:var(--ochre-400);font-size:14px;">Pravidelně</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">BRIGÁDA</span>
-          </div>
-          <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">
-            <span style="color:var(--ivory);font-weight:600;font-size:16px;">Údržba zbrojnice a okolí</span>
-            <span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">Pravidelné úklidové a údržbové práce u zbrojnice a v okolí — sekání trávy, úklid, drobné opravy.</span>
-            <a href="udrzba-zbrojnice.html" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail →</a>
-          </div>
-        </div>
-
-      </div>
+      <div id="akce-list" style="display:flex;flex-direction:column;gap:12px;"></div>
     </div>
   </section>
 
@@ -344,5 +177,180 @@
   </footer>
 
 </div>
+<script>
+  var all = [
+ {
+  "year": "2018",
+  "date": "18. 9. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Výstavba autobusových zastávek",
+  "desc": "V Boru začala výstavba autobusových zastávek.",
+  "hours": "",
+  "people": "",
+  "detail": "zastavky-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "2018",
+  "kind": "AKCE",
+  "title": "Letní posezení",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "letni-posezeni-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "12. 5. 2018",
+  "kind": "AKCE",
+  "title": "Dětský den — 100 let od vzniku republiky",
+  "desc": "Slavnostní den ke 100. výročí vzniku Československé republiky spojený s dětským dnem a večerní zábavou. Na stanovištích soutěžilo 105 dětí.",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "14. 1. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Sběr železného šrotu",
+  "desc": "Sběr železného šrotu v Boru a Rudolci, zároveň byla vyčištěna vana na šrot (10:00–11:30). Účast: Budka Lubomír, Neužil Jiří st., Pešta Vladimír ml., Roškot Luděk, Roškot Luděk ml., Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Štemberk Josef, Všetečka Jan, Zemánek Martin.",
+  "hours": "16,5 h",
+  "people": "11 účastníků",
+  "detail": "zelezny-srot-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "13. 1. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Odvoz a třídění kamenů",
+  "desc": "Odvoz kamení z Nedrahovic na stavbu čekáren a třídění kamenů (9:00–11:30). Účast: Budka Lubomír, Pešta Josef, Pešta Vladimír ml., Rataj Luboš, Roškot Luděk, Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Spilka Vladimír ml., Spilka Vladimír nejml., Všetečka Jan, Zemánek Martin.",
+  "hours": "30 h",
+  "people": "12 účastníků",
+  "detail": "kameni-cekarny-2018.html"
+ },
+ {
+  "year": "2017",
+  "date": "30. 4. 2017",
+  "kind": "AKCE",
+  "title": "Čarodějnice",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "carodejnice-2017.html"
+ },
+ {
+  "year": "2014",
+  "date": "2014",
+  "kind": "AKCE",
+  "title": "Dětský den v Boru",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2014.html"
+ },
+ {
+  "year": "2013",
+  "date": "29. 6. 2013",
+  "kind": "AKCE",
+  "title": "Dětský den",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2013.html"
+ },
+ {
+  "year": "2013",
+  "date": "2. 6. 2013",
+  "kind": "BRIGÁDA",
+  "title": "Povodeň",
+  "desc": "Pomoc sboru při povodni v Boru.",
+  "hours": "",
+  "people": "",
+  "detail": "povoden-2013.html"
+ },
+ {
+  "year": "2012",
+  "date": "6. 10. 2012",
+  "kind": "AKCE",
+  "title": "Farmářské slavnosti",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "farmarske-slavnosti-2012.html"
+ },
+ {
+  "year": "2012",
+  "date": "26. 5. 2012",
+  "kind": "AKCE",
+  "title": "Dětský den",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2012.html"
+ },
+ {
+  "year": "2005",
+  "date": "20. 9. 2005",
+  "kind": "BRIGÁDA",
+  "title": "Nové nástěnky v hasičárně",
+  "desc": "Instalace nových nástěnek v hasičárně.",
+  "hours": "",
+  "people": "",
+  "detail": "nastenky-hasicarna-2005.html"
+ },
+ {
+  "year": "2005",
+  "date": "13. 8. a 10. 9. 2005",
+  "kind": "BRIGÁDA",
+  "title": "Stavba krbu",
+  "desc": "Stavba venkovního krbu.",
+  "hours": "",
+  "people": "",
+  "detail": "stavba-krbu-2005.html"
+ },
+ {
+  "year": "Pravidelně",
+  "date": "Pravidelně",
+  "kind": "BRIGÁDA",
+  "title": "Údržba zbrojnice a okolí",
+  "desc": "Pravidelné úklidové a údržbové práce u zbrojnice a v okolí — sekání trávy, úklid, drobné opravy.",
+  "hours": "",
+  "people": "",
+  "detail": "udrzba-zbrojnice.html"
+ }
+];
+  var yearOptions = ["Vše", "2018", "2017", "2014", "2013", "2012", "2005"];
+  var selectedYear = 'Vše';
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function render() {
+    var fw = document.getElementById('year-filters');
+    fw.innerHTML = '<span class="mono" style="font-size:12px;color:var(--ivory-dim);letter-spacing:0.1em;">ROK:</span>';
+    yearOptions.forEach(function (y) {
+      var b = document.createElement('button');
+      b.className = 'chip-dark' + (y === selectedYear ? ' active' : '');
+      b.textContent = y;
+      b.addEventListener('click', function () { selectedYear = y; render(); });
+      fw.appendChild(b);
+    });
+    var list = document.getElementById('akce-list'); list.innerHTML = '';
+    all.filter(function (r) { return selectedYear === 'Vše' || r.year === selectedYear; }).forEach(function (r) {
+      var d = document.createElement('div'); d.className = 'plate brig-row';
+      d.innerHTML =
+        '<div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">' +
+          '<span class="mono" style="color:var(--ochre-400);font-size:14px;">' + esc(r.date) + '</span>' +
+          '<span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">' + esc(r.kind) + '</span>' +
+        '</div>' +
+        '<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">' +
+          '<span style="color:var(--ivory);font-weight:600;font-size:16px;">' + esc(r.title) + '</span>' +
+          (r.desc ? '<span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">' + esc(r.desc) + '</span>' : '') +
+          '<a href="' + r.detail + '" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail \u2192</a>' +
+        '</div>' +
+        (r.hours ? '<div class="brig-stats"><span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">' + esc(r.hours) + '</span><span class="mono" style="color:var(--ivory-dim);font-size:11px;">' + esc(r.people) + '</span></div>' : '');
+      list.appendChild(d);
+    });
+  }
+  render();
+</script>
 </body>
 </html>
