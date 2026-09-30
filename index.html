@@ -32,6 +32,11 @@
   .plate{background:var(--navy-800);border:1px solid var(--line);}
   .card{background:#FFFFFF;border:1px solid #E4DCC9;}
   .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  .news-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:24px;}
+  @media (max-width:900px){ .news-grid{grid-template-columns:1fr;} }
+  .news-card{display:flex;flex-direction:column;border-radius:2px;overflow:hidden;transition:border-color .15s;}
+  .news-card:hover{border-color:var(--ochre-500);}
+  .news-card:hover .news-more{color:var(--ochre-500);}
 </style>
 
 <div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
@@ -93,6 +98,51 @@
       <div style="padding:26px 24px;text-align:center;">
         <div class="mono" style="color:var(--ochre-400);font-size:26px;font-weight:600;">Sedlčansko</div>
         <div style="color:var(--ivory-dim);font-size:13px;margin-top:4px;">Okrsek</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Novinky (poslední 3 akce a soutěže) -->
+  <section id="novinky" style="width:100%;background:var(--ivory);border-bottom:1px solid #E4DCC9;">
+    <div style="max-width:1280px;margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;gap:36px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:640px;">
+          <div class="section-label">Novinky</div>
+          <h2 style="font-size:34px;color:var(--navy-900);">Poslední akce a soutěže</h2>
+        </div>
+        <div style="display:flex;gap:28px;flex-wrap:wrap;">
+          <a href="akce.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--navy-900);font-weight:600;font-size:17px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;white-space:nowrap;width:fit-content;">Všechny akce</a>
+          <a href="souteze.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--navy-900);font-weight:600;font-size:17px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;white-space:nowrap;width:fit-content;">Všechny soutěže</a>
+        </div>
+      </div>
+      <div class="news-grid">
+        <a href="stavba-pristresku-2026.html" class="card news-card">
+          <img src="images/stavba-pristresku-2026/3.jpg" alt="Betonáž základové desky přístřešku na dřevo" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+            <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:var(--ochre-500);">30. 9. 2026 · BRIGÁDA</div>
+            <h3 style="font-size:19px;color:var(--navy-900);">Stavba přístřešku na uskladnění dřeva</h3>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;margin:0;flex:1;">Výkop základů, osazení patek a betonáž základové desky pro přístřešek na dřevo u hasičárny.</p>
+            <span class="mono news-more" style="font-size:12px;font-weight:600;color:var(--navy-900);margin-top:6px;">Detail →</span>
+          </div>
+        </a>
+        <a href="mezi-stromy-2019.html" class="card news-card">
+          <div style="height:180px;background:var(--navy-800);background-image:repeating-linear-gradient(115deg, rgba(217,138,43,0.07) 0px, rgba(217,138,43,0.07) 2px, transparent 2px, transparent 40px);display:flex;align-items:center;justify-content:center;"><span class="mono" style="color:var(--ochre-400);font-size:14px;font-weight:600;letter-spacing:0.12em;">1. MÍSTO · STARŠÍ ŽÁCI</span></div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+            <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:var(--ochre-500);">14. 9. 2019 · SOUTĚŽ</div>
+            <h3 style="font-size:19px;color:var(--navy-900);">Mezi stromy</h3>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;margin:0;flex:1;">Šestý ročník dětské soutěže v požárním útoku v obecním parku v Boru s rekordními 15 družstvy. Starší žáci SDH Bor zvítězili.</p>
+            <span class="mono news-more" style="font-size:12px;font-weight:600;color:var(--navy-900);margin-top:6px;">Detail →</span>
+          </div>
+        </a>
+        <a href="dobrosovka-cup-2019.html" class="card news-card">
+          <img src="images/dobrosovka-cup-2019/1.jpg" alt="Nástup družstev na noční soutěži Dobrošovka Cup 2019" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+            <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:var(--ochre-500);">8. 6. 2019 · SOUTĚŽ</div>
+            <h3 style="font-size:19px;color:var(--navy-900);">Dobrošovka Cup</h3>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;margin:0;flex:1;">Noční hasičská soutěž v Dobrošovicích, které se zúčastnilo i družstvo SDH Bor.</p>
+            <span class="mono news-more" style="font-size:12px;font-weight:600;color:var(--navy-900);margin-top:6px;">Detail →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
