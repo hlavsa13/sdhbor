@@ -16,6 +16,7 @@
     --ochre-500:#D98A2B;
     --ochre-400:#E7A652;
     --ivory:#F3EEE2;
+    --sand:#E6DDC8;
     --ivory-dim:#B9C0C9;
     --line:rgba(217,138,43,0.35);
   }
@@ -34,7 +35,7 @@
   .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
   .news-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:24px;}
   @media (max-width:900px){ .news-grid{grid-template-columns:1fr;} }
-  .news-card{display:flex;flex-direction:column;border-radius:2px;overflow:hidden;transition:border-color .15s;}
+  .news-card{box-shadow:0 1px 3px rgba(10,18,29,0.08);display:flex;flex-direction:column;border-radius:2px;overflow:hidden;transition:border-color .15s;}
   .news-card:hover{border-color:var(--ochre-500);}
   .news-card:hover .news-more{color:var(--ochre-500);}
 </style>
@@ -103,7 +104,7 @@
   </section>
 
   <!-- Novinky (poslední 3 akce a soutěže) -->
-  <section id="novinky" style="width:100%;background:var(--ivory);border-bottom:1px solid #E4DCC9;">
+  <section id="novinky" style="width:100%;background:var(--sand);border-top:4px solid var(--ochre-500);">
     <div style="max-width:1280px;margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;gap:36px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
         <div style="display:flex;flex-direction:column;gap:14px;max-width:640px;">
