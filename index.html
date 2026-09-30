@@ -33,6 +33,7 @@
   .plate{background:var(--navy-800);border:1px solid var(--line);}
   .card{background:#FFFFFF;border:1px solid #E4DCC9;}
   .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  @media (max-width:900px){ .br-desk{display:none;} }
   .news-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:24px;}
   @media (max-width:900px){ .news-grid{grid-template-columns:1fr;} }
   .news-card{box-shadow:0 1px 3px rgba(10,18,29,0.08);display:flex;flex-direction:column;border-radius:2px;overflow:hidden;transition:border-color .15s;}
@@ -72,10 +73,10 @@
   <!-- Hero -->
   <section style="width:100%;background:var(--navy-900);position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(115deg, rgba(217,138,43,0.07) 0px, rgba(217,138,43,0.07) 2px, transparent 2px, transparent 64px);"></div>
-    <div style="max-width:1280px;margin:0 auto;padding:110px 32px 96px;position:relative;display:flex;flex-direction:column;gap:28px;max-width:760px;">
-      <div class="mono" style="color:var(--ochre-400);font-size:13px;letter-spacing:0.16em;">SBOR DOBROVOLNÝCH HASIČŮ · ZALOŽEN 1906</div>
-      <h1 style="color:var(--ivory);font-size:56px;line-height:1.08;font-weight:700;">Sloužíme obci Bor a okolí už přes sto let</h1>
-      <p style="color:var(--ivory-dim);font-size:17px;line-height:1.6;font-weight:400;max-width:560px;">Zásahová jednotka, dobrovolní hasiči a spolková činnost pro Úklid, Bor a Rudolec — soutěže, brigády a akce pro celou obec.</p>
+    <div style="max-width:1280px;margin:0 auto;padding:110px 32px 96px;position:relative;display:flex;flex-direction:column;gap:28px;max-width:900px;">
+      <div class="mono" style="color:var(--ochre-400);font-size:13px;letter-spacing:0.16em;">SBOR DOBROVOLNÝCH HASIČŮ</div>
+      <h1 style="color:var(--ivory);font-size:56px;line-height:1.08;font-weight:700;">Od roku 1906 pro osady<br class="br-desk"> Bor, Úklid a&nbsp;Rudolec</h1>
+      <p style="color:var(--ivory-dim);font-size:17px;line-height:1.6;font-weight:400;max-width:560px;">Dobrovolní hasiči, soutěže, brigády a akce pro celou obec.</p>
       <div style="display:flex;gap:16px;padding-top:8px;">
         <a href="historie.html" class="btn-primary" style="padding:14px 28px;border-radius:2px;font-weight:600;font-size:15px;">Historie</a>
       </div>
