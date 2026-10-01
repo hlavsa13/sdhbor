@@ -53,6 +53,11 @@
   .kr-facts{display:grid;grid-template-columns:1fr auto;gap:8px 24px;font-size:14px;line-height:1.6;color:#3B3226;}
   .kr-facts span:nth-child(2n){font-family:'JetBrains Mono',monospace;color:var(--navy-900);font-weight:600;text-align:right;}
   @media (max-width:640px){ .kr-num{font-size:44px;} .kr-res{grid-template-columns:1fr;gap:2px;} .kr-res dd{margin-bottom:8px;} .kr-facts{grid-template-columns:1fr;gap:2px;} .kr-facts span:nth-child(2n){text-align:left;margin-bottom:8px;} }
+  .kr-tabs{display:flex;gap:28px;flex-wrap:wrap;padding-top:4px;}
+  .kr-tab{font-size:15px;font-weight:600;color:var(--ivory-dim);padding-bottom:6px;border-bottom:2px solid transparent;}
+  .kr-tab:hover{color:var(--ochre-400);}
+  .kr-tab.active{color:var(--ivory);border-bottom-color:var(--ochre-500);}
+  .kr-tab span{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:400;margin-left:6px;color:var(--ochre-400);}
 </style>
 
 <div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
@@ -89,6 +94,10 @@
     <div style="max-width:900px;margin:0 auto;padding:64px 32px 40px;display:flex;flex-direction:column;gap:16px;">
       <div class="section-label">Kronika</div>
       <h1 style="color:var(--ivory);font-size:40px;font-weight:700;">Z kroniky obce</h1>
+      <nav class="kr-tabs" aria-label="Části kroniky">
+        <a href="kronika.html" class="kr-tab active">Kronika obce<span>2020–2025</span></a>
+        <a href="jednaci-kniha.html" class="kr-tab">Jednací kniha sboru<span>1906–1948</span></a>
+      </nav>
       <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;margin:0;">Zápisy z obecní kroniky od roku 2020.</p>
       <div id="kr-filters" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px;">
         <span class="mono" style="font-size:12px;color:var(--ivory-dim);letter-spacing:0.1em;">ROK:</span>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>SDH Bor u Sedlčan — Jednací kniha sboru 1906–1948</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+  :root{
+    --navy-900:#0A121D;
+    --navy-800:#0F1B29;
+    --navy-700:#152638;
+    --ochre-500:#D98A2B;
+    --ochre-400:#E7A652;
+    --ivory:#F3EEE2;
+    --ivory-dim:#B9C0C9;
+    --line:rgba(217,138,43,0.35);
+  }
+  body{margin:0;background:var(--ivory);font-family:'Inter',system-ui,sans-serif;color:var(--navy-900);}
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;letter-spacing:0.01em;margin:0;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  a{color:inherit;text-decoration:none;}
+  .navlink{color:var(--ivory-dim);font-size:14px;font-weight:500;letter-spacing:0.02em;}
+  .navlink:hover{color:var(--ochre-400);}
+  .plate{background:var(--navy-800);border:1px solid var(--line);}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  .win-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--navy-900);background:var(--ochre-500);padding:4px 10px;border-radius:2px;white-space:nowrap;}
+  .btn-primary{background:var(--ochre-500);color:var(--navy-900);}
+  .btn-primary:hover{background:var(--ochre-400);}
+  .people-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:10px;}
+  @media (max-width:640px){ .people-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  .results-grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:24px;}
+  @media (max-width:640px){ .results-grid{grid-template-columns:1fr;} }
+  .gallery-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px;align-items:start;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:480px){ .gallery-grid{grid-template-columns:1fr;} }
+  .chip-dark{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 16px;border-radius:999px;border:1px solid rgba(185,192,201,0.35);color:var(--ivory-dim);background:transparent;cursor:pointer;}
+  .chip-dark:hover{border-color:var(--ochre-400);color:var(--ochre-400);}
+  .chip-dark.active{background:var(--ochre-500);color:var(--navy-900);border-color:var(--ochre-500);}
+  .kr-year{display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px;}
+  .kr-year.hidden{display:none;}
+  .kr-year:not(.hidden) ~ .kr-year:not(.hidden){border-top:1px solid #E4DCC9;padding-top:56px;}
+  .kr-num{font-family:'Oswald',system-ui,sans-serif;font-size:56px;font-weight:700;line-height:1;color:var(--ochre-500);}
+  .kr-year p{font-size:16px;line-height:1.8;color:#3B3226;margin:0;}
+  .kr-box{background:#FFFFFF;border:1px solid #E4DCC9;border-left:3px solid var(--ochre-500);border-radius:2px;padding:20px 24px;display:flex;flex-direction:column;gap:12px;}
+  .kr-res{display:grid;grid-template-columns:150px 1fr;gap:8px 20px;font-size:14px;line-height:1.6;color:#3B3226;}
+  .kr-res dt{font-weight:600;color:var(--navy-900);}
+  .kr-res dd{margin:0;}
+  .kr-res b{color:var(--navy-900);}
+  .kr-facts{display:grid;grid-template-columns:1fr auto;gap:8px 24px;font-size:14px;line-height:1.6;color:#3B3226;}
+  .kr-facts span:nth-child(2n){font-family:'JetBrains Mono',monospace;color:var(--navy-900);font-weight:600;text-align:right;}
+  @media (max-width:640px){ .kr-num{font-size:44px;} .kr-res{grid-template-columns:1fr;gap:2px;} .kr-res dd{margin-bottom:8px;} .kr-facts{grid-template-columns:1fr;gap:2px;} .kr-facts span:nth-child(2n){text-align:left;margin-bottom:8px;} }
+  .kr-tabs{display:flex;gap:28px;flex-wrap:wrap;padding-top:4px;}
+  .kr-tab{font-size:15px;font-weight:600;color:var(--ivory-dim);padding-bottom:6px;border-bottom:2px solid transparent;}
+  .kr-tab:hover{color:var(--ochre-400);}
+  .kr-tab.active{color:var(--ivory);border-bottom-color:var(--ochre-500);}
+  .kr-tab span{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:400;margin-left:6px;color:var(--ochre-400);}
+  .jk-entry{display:flex;flex-direction:column;gap:10px;padding:22px 26px;background:#FFFFFF;border:1px solid #E4DCC9;border-radius:2px;}
+  .jk-meta{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:var(--ochre-500);text-transform:uppercase;}
+  .jk-entry h3{font-size:19px;color:var(--navy-900);margin:0;}
+  .jk-entry p{font-size:15px;line-height:1.75;color:#3B3226;margin:0;}
+  .jk-entry p.jk-sign{font-style:italic;color:#7A6E58;font-size:14px;}
+</style>
+
+<div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="width:100%;background:var(--navy-900);">
+    <div style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">Bor 3, Nedrahovice 264 01</div>
+      <a href="mailto:sdh.bor.nedrahovice@gmail.com" class="mono" style="color:var(--ivory-dim);font-size:12px;">sdh.bor.nedrahovice@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header (shared) -->
+  <header style="width:100%;background:var(--navy-900);border-bottom:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" style="display:flex;flex-direction:column;line-height:1.15;">
+        <span style="color:var(--ochre-400);font-family:'Oswald';font-weight:600;font-size:22px;letter-spacing:0.02em;">SDH BOR</span>
+        <span class="mono" style="color:var(--ivory-dim);font-size:12px;">U SEDLČAN</span>
+      </a>
+      <nav style="display:flex;gap:28px;align-items:center;">
+        <a href="index.html" class="navlink">Úvod</a>
+        <a href="historie.html" class="navlink">Historie</a>
+        <a href="clenove.html" class="navlink">Seznam členů</a>
+        <a href="souteze.html" class="navlink">Soutěže</a>
+        <a href="akce.html" class="navlink">Akce</a>
+        <a href="#" class="navlink" style="color:var(--ochre-400);">Kronika</a>
+        <a href="index.html#kontakt" class="navlink">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section style="width:100%;background:var(--navy-900);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 40px;display:flex;flex-direction:column;gap:16px;">
+      <div class="section-label">Kronika</div>
+      <h1 style="color:var(--ivory);font-size:40px;font-weight:700;">Jednací kniha sboru 1906–1948</h1>
+      <nav class="kr-tabs" aria-label="Části kroniky">
+        <a href="kronika.html" class="kr-tab">Kronika obce<span>2020–2025</span></a>
+        <a href="jednaci-kniha.html" class="kr-tab active">Jednací kniha sboru<span>1906–1948</span></a>
+      </nav>
+      <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;margin:0;">Přepis zápisníku „o schůzích a valných hromadách“ Sboru dobrovolných hasičů v Boru, který začíná rokem 1906.</p>
+      <div id="kr-filters" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px;">
+        <span class="mono" style="font-size:12px;color:var(--ivory-dim);letter-spacing:0.1em;">ROK:</span>
+        <button class="chip-dark active" data-year="all">Vše</button>
+        <button class="chip-dark" data-year="1906">1906</button>
+        <button class="chip-dark" data-year="1907">1907</button>
+        <button class="chip-dark" data-year="1908">1908</button>
+        <button class="chip-dark" data-year="1909">1909</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kronika -->
+  <section style="width:100%;background:var(--ivory);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 80px;display:flex;flex-direction:column;gap:56px;">
+      <div class="kr-box">
+        <div class="section-label" style="font-size:12px;">O přepisu</div>
+        <p style="font-size:14px;line-height:1.7;color:#3B3226;margin:0;">Přepis zachovává původní znění a dobový pravopis zápisů (např. „Ouklid“, „akklamací“, „kterýž“); doplněna byla jen interpunkce a sjednocen zápis dat. Nejistá čtení jsou označena otazníkem v závorce. Údaj „str.“ odkazuje na stranu naskenované knihy. Přepis je průběžně doplňován.</p>
+      </div>
+
+      <article class="kr-year" id="rok-1906" data-year="1906">
+        <h2 class="kr-num">1906</h2>
+        <div class="jk-entry">
+          <div class="jk-meta">29. 7. 1906 · str. 2–3</div>
+          <h3>Zápis I. – Valná hromada</h3>
+          <p>O valné hromadě konané dne 29. července 1906 v hostinci v Ouklidě.</p>
+          <p>Na pořadu bylo následující jednání:</p>
+          <p>1. Projednáno došlé schválení stanov c. a k. místodržitelstvím: vzato na vědomí.</p>
+          <p>2. Jakým způsobem opatřit peněz ku hražení výloh při stavbě kolny a jiné: usneseno vydlužit se prozatím 200 korun buď z okresní hospodářské záložny, neb od jednotlivce, ku kterémuž účeli zapůjčil 200 kor. Frant. Heran.</p>
+          <p>3. Volba funkcionářů, kteráž provedena následovně: Za starostu zvolen všemi hlasy přítomných vyjma jednoho p. Karel Chocholoušek z Boru.</p>
+          <p>4. Za velitele ze 24 hlasů přítomných 17 hlasy p. Antonín Heran z Boru. Za náměstka velitele 15 hlasy p. Alois Beneš, kovář z Libíně. Do výboru zvoleni čtyři členové, totiž: p. Josef Chocholoušek z Libíně 16 hlasy, p. Jan Červenka z Rudolce 16 hlasy, p. Ant. Pilík z Ouklida 12 hlasy, p. Emanuel Soukup z Boru 11 hlasy. Za náhradníky výboru dva členové, totiž: p. František Všetečka z Boru 9 hlasy, p. Podojil František z Ouklida 9 hlasy; ostatní hlasy byly roztříštěny. Po dotazu svolávatelově, zdali zvolení volbu přijímají, vyslovili se všichni, že ano, a i na p. Herana, který přítomen nebyl, kterýž po schůzi taktéž volbu přijímá.</p>
+          <p>5. Ve volných návrzích p. starosta obce pan Budka nabádal nově přistouplé členy ku sboru ku svorné práci a k poslušnosti nově zvolených funkcionářů, totiž že tam, kde svornost a disciplína ve sboru se udrží, vždy k blahu všech občanů prospívá, kterýžto srdečný a přátelský proslov od všech přítomných s nadšením přijmut byl. Jelikož se více žádný ke slovu nehlásil, zatímní svolávatel schůzi skončil a žádá přítomné, by slova p. starosty sobě k srdci vzali a dle nich se vždy řídili.</p>
+          <p class="jk-sign">Tímto skončeno. Zatímní svolávatel.</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">5. 8. 1906 · str. 3</div>
+          <h3>Výborová schůze</h3>
+          <p>Zápis při výborové schůzi dobrovolných hasičů v Boru konané dne 5. srpna 1906 v Boru.</p>
+          <p>Předmět:</p>
+          <p>1. Volba jednatele provedena akklamací a jednohlasně zvolen p. Ant. Soukup z Boru a zároveň přidělena mu funkce pokladníka.</p>
+          <p>2. Ustanovení platu zedníkům: usneseno jednohlasně vyplácet ku stravě 2 K denně.</p>
+          <p>3. Objednání výzbroje: usneseno požádat některého, aby potřebné vše dle jiných sborů objednal.</p>
+          <p>4. Objednání látky na pracovní obleky: usneseno dodávku tuto provést prostřednictvím p. Vojtěcha Klokočky v Jesenici.</p>
+          <p class="jk-sign">Skončeno a podepsáno.</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">23. 9. 1906 · str. 4</div>
+          <h3>Zápis II. – Mimořádná valná hromada</h3>
+          <p>Při mimořádné valné hromadě konané dne 23. září 1906 v Ouklidě.</p>
+          <p>Po pořadu bylo následující jednání:</p>
+          <p>1. Kdy má být zaražení spolku: usneseno většinou, aby se odložilo zaražení spolku až na jaro 1907.</p>
+          <p>2. Vybírání příspěvků a zápisného, a vybráno následovně: zakládajících p. Josef Kymla 30 korun, p. J. Budka z Ouklida 20 kor., p. Frant. Podojil z Ouklida 20 kor., Jan Duchoň z Boru 20 kor., Jan Červenka z Rudolce 20 kor., Pilík Ant. z Ouklida 20 kor., Jos. Pešta z Boru 20 kor., p. Kymla Tomáš z Doubravy dal částku 20 kor. dříve. Členové přispívající zaplatili po 2 korunách: p. Frant. Melich, Václav Podojil. Členové činní dali zápisné tito: p. Ant. Duchoň, Ant. Heran, Fran. Podojil, Alois Beneš, Ant. Hubínek, Jan Pešta, Emanuel Soukup, Ant. Červenka, Chocholoušek Josef, Heřmánek z Rud., Pešek z Libíně, Karel Mrva. Celkem vybráno o schůzi 146 kor.</p>
+          <p>3. Ve volných návrzích bylo usneseno, aby se objednaly přilbice pro hasiče, horna, povely a píšťaly se šňůrami, a výbor byl splnomocněn, aby vyhledal, kde by se to nejlevněji zařídilo a aby bylo vše dostatečné, což vzato od výboru na vědomí. Dále aby se koupilo razítko pro hasičský sbor v Boru od firmy Jos. Kubias v Praze – vzato na vědomí.</p>
+          <p>Poněvadž se již žádný ke slovu nehlásil, prohlásil p. předseda schůzi za skončenou.</p>
+          <p class="jk-sign">Ant. Soukup, jednatel</p>
+        </div>
+      </article>
+
+      <article class="kr-year" id="rok-1907" data-year="1907">
+        <h2 class="kr-num">1907</h2>
+        <div class="jk-entry">
+          <div class="jk-meta">15. 6. 1907 · str. 5</div>
+          <h3>Mimořádná schůze sboru</h3>
+          <p>Zápis o mimořádné schůzi sboru dobrovolných hasičů v Boru.</p>
+          <p>Do schůze dostavilo se 14 členů: Ant. Heran, Frant. Všetečka, Václav Havel, Em. Soukup, Jan Pešta, Ant. Hubínek, Karel Mrva, Ant. Javůrek, Ant. Duchoň, Ant. Červenka, Jan Heřmánek, Ant. Pešek, Josef Chlasták, Ant. Soukup.</p>
+          <p>Projednáváno zřízení slavnosti zaražení sboru a svěcení stříkačky.</p>
+          <p>Ujednáno následovně: Za příčinou neshody p. župního jednatele Ant. Chyby a p. faráře Karla Pyši upuštěno skoro jednohlasně od konání slavnosti.</p>
+          <p>Dne 15. června 1907. Soukup, jednatel</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">14. 12. 1907 · str. 5–6</div>
+          <h3>Schůze výboru</h3>
+          <p>Zápis schůze členů výboru sboru dobrov. hasičů v Boru konané dne 14. prosince 1907 v Libíni v hostinci.</p>
+          <p>Do schůze dostavili se: Ant. Heran, Alois Beneš, Emanuel Soukup, František Všetečka, Ant. Pilík, Jan Červenka, Ant. Soukup a Karel Chocholoušek, předseda, a jednáno následovně:</p>
+          <p>1. Zpráva jednatelská čtena a zápisy schůzí, k čemuž bylo připomenuto, by se od toho upustilo až při valné hromadě.</p>
+          <p>2. Ustanovení, kdo a kdy se má pořádat věneček, a nebo od toho upustit. Pan předseda dal o to hlasovat a všemi hlasy se od hlasovaných usneseno, aby se pořádal věneček, a ujednáno pořádati ho letos v Libíni za těchto podmínek: vše si sami zařídit a hostinskému za místnost a světlo a vytopení dáti 7 korun. Ples stanoven na 12. ledna 1908 a pozvánky objednat 200 kusů, 50 obálek a 100 kotilionů od Strombacha v Lounech. Zároveň ujednáno, aby se dne 5. ledna 1908 odbývala valná hromada v Ouklidě.</p>
+          <p>3. Dále jednáno, aby se úrok 46 kor. do hospodářské okr. záložny v Sedlčanech zaplatil z pokladny hasičské, což také pokladník A. Soukup složil panu před. Karlu Chocholouškovi, by je v záložně složil na úrok z vydlužených peněz na stříkačku, a jednáno o tom, že by sbor nemohl dále úrok platit, poněvadž nemá členů přispívajících, aby se požádala politická obec Nedrahovická, by úrok sama hradila. Dále se žádný ke slovu nehlásil, a tím schůze skončena.</p>
+          <p class="jk-sign">Viděl A. Chyba, okr. has. dozorce, 26. 4. 1908.</p>
+        </div>
+      </article>
+
+      <article class="kr-year" id="rok-1908" data-year="1908">
+        <h2 class="kr-num">1908</h2>
+        <div class="jk-entry">
+          <div class="jk-meta">6. 1. 1908 · str. 7–8</div>
+          <h3>Protokol II. – Valná hromada</h3>
+          <p>O valné hromadě sboru dobrovolných hasičů v Boru odbývané dne 6. ledna 1908 v Ouklidě v hostinci p. Podojila, a jednáno následovně:</p>
+          <p>1. Zahájení schůze pan. předsedou sboru Karlem Chocholouškem, kterýž schůzi zahájil s povděkem, že se dostavilo dosti členů, počtem 26, a dal předčítati ke druhému bodu zápis o poslední valné hromadě.</p>
+          <p>2. Zápis o poslední valné hromadě byl schválen.</p>
+          <p>3. Podaná zpráva jednatelská a pokladní; obojí podané zprávy byly členy dosti sledovány a uznány za správné s podotknutím, aby se ze členů 3 členové ke prozkoumání účtů zvolili a podali zprávu sboru o správnosti účtů.</p>
+          <p>4. Volné návrhy nebyly žádné podané, jenom se přihlásil ke slovu br. Beneš se žádostí ke členům činným, aby se více žádné nepříjemnosti neopakovaly, při čemž se ohrazoval, že on není ničím vinen, při čemž se byla mezi členy debata rozvinula. Na její doslov promluvil br. Budka, starosta z Ouklida, jenž vlídně a věcně přednášel členům sboru ku svornosti a nejlepšímu přátelství všech členů bez rozdílu, aby každý jednotlivec</p>
+          <p>pracoval pro celek, a tím bude schopen celek pomáhat každému jednotlivci, což jest nejlepší zárukou zdaru sboru. Jelikož se žádný ke slovu nehlásil, tím schůze skončena.</p>
+          <p class="jk-sign">K. Chocholoušek, předseda – Jakub Balík – Ant. Soukup, jednatel</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">26. 4. 1908 · str. 6–7</div>
+          <h3>Protokol o přehlídce sboru župním dozorcem</h3>
+          <p>Protokol o přehlídce sboru dne 26. IV. 1908 konané župním dozorcem.</p>
+          <p>Spisy jednací vedeny jsou v pořádku a přesně dle Z. Ú. H. Jed.</p>
+          <p>Cvičeno se stříkačkou dle norm. cvičení s jedním dílem hadic za přítomnosti 12 čl. z 18. Doporučuje se užívati velení přesně dle 5. seš. Has. knihovny.</p>
+          <p>Podpůrná pokladna zřízena při odboru v Kamenici. Bylo by žádoucno, aby více než 5 členů se přihlásilo.</p>
+          <p>Dále sboru se doporučuje pořádati aspoň dvakrát do roka přednášku vzdělávací, čímž docílí sbor vzdělávání nejen členstva, ale i veškerého obecenstva.</p>
+          <p>V době zimní možno předčítati Has. Rozhledy a upozorňovati na články odborné i na úvahy polit. př. Michálka.</p>
+          <p>Vzděláváním kráčejme ku předu, rozpočítajíce</p>
+          <p>pochodeň osvěty nejen slovy, ale i skutky za heslem: Neučme se jen mluviti, čísti a psáti česky, ale i jednati ve všem česky.</p>
+          <p class="jk-sign">A. Chyba, okr. has. dozorce, 26. 4. 1908.</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">7. 6. 1908 · str. 8</div>
+          <h3>Schůze výboru</h3>
+          <p>Zápis schůze výboru dne 7. června 1908 odbývané v hostinci v Ouklidě. Do schůze dostavilo se 7 členů: předseda Karel Chocholoušek, Ant. Heran, Jan Červenka, Emanuel Soukup, Anton. Pilík, Frant. Podojil, Ant. Soukup, a jednáno následovně:</p>
+          <p>1. Zdali se mají předělat na zapínání bílé kabáty hasičské, a má-li se to nechat předělat od sboru, čili každý jednotlivec sám: ujednáno, že se to může přešít, a na návrh br. Podojila, by se sboru nedělalo výloh, by si to každý sám nechal opravit, což bylo všemi hlasy přijato.</p>
+          <p>2. Má-li se vystoupit na slavnost o Božím Těle a v jakém obleku: po dohodě všech členů ujednáno, by se dohodli s druhými sbory.</p>
+          <p>3. Usnesení o dostavení se sjezdu do Nedrahovic, má-li se členům povolit cestovné z pokladny, a povoleno 10 kor. jednohlasně.</p>
+          <p>4. Má-li se 28. června jíti na výroční mši sv.: ujednáno, aby p. velitel to přednesl členům při cvičení a usnesení sdělil výboru.</p>
+          <p>5. Volné návrhy: podáno p. velitelem Heránem, aby se koupilo pro sbor několik spon na hadice, záchranná houba a lucerna, což bylo přijato. Jelikož se žádný o slovo nehlásil, tím schůze skončena.</p>
+          <p class="jk-sign">7. 6. 1908. K. Chocholoušek, předseda – Ant. Soukup, jednatel</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">26. 12. 1908 · str. 9</div>
+          <h3>Schůze výboru</h3>
+          <p>Zápis o schůzi výboru sboru dobrovolných hasičů v Boru dne 26. 12. 1908 konané v hostinci v Ouklidě.</p>
+          <p>Do schůze dostavili se p. Karel Chocholoušek, předseda, Ant. Heran, Alois Beneš, Ant. Pilík, Eman. Soukup, Frant. Podojil a Ant. Soukup, a jednáno následovně:</p>
+          <p>1. Zahájena schůze p. předsedou.</p>
+          <p>2. Podána zpráva jednatelská a pokladní, což vzato na vědomí a schváleno.</p>
+          <p>3. Jednáno, kde a kdy se má odbývat valná hromada: usneseno, aby se odbývala v Libíni v hostinci dne 3. ledna 1909 ve 2 hodiny odpoledne.</p>
+          <p>4. Ve volných návrzích sděluje br. Beneš, aby se objednaly asi 4 odznaky pro členy a 2 píšťalky. Ku konci se přihlásil za člena p. učitel Hrdina.</p>
+          <p>Tím schůze skončena, jelikož se žádný o slovo nehlásil.</p>
+          <p class="jk-sign">26. 12. 1908. Ant. Soukup</p>
+        </div>
+      </article>
+
+      <article class="kr-year" id="rok-1909" data-year="1909">
+        <h2 class="kr-num">1909</h2>
+        <div class="jk-entry">
+          <div class="jk-meta">3. 1. 1909 · str. 9–10</div>
+          <h3>Zápis III. – Valná hromada</h3>
+          <p>O valné hromadě sboru dobrovolných hasičů v Boru odbývané dne 3. ledna 1909 v hostinci v Libíni.</p>
+          <p>Předmět:</p>
+          <p>1. Čtení zápisu z poslední valné hromady a uznáno za správné, tak jak bylo jednáno.</p>
+          <p>2. Podána zpráva jednatelská a pokladní, což bylo všemi členy pečlivě sledováno a uznáno, že jest vše správně jednáno a pokladní jmění vedeno. P. předseda Karel Chocholoušek připomíná, by se jistá část z pokladního jmění splatila na dluh do okr. hospod. záložny v Sedlčanech za stříkačku vypůjčených.</p>
+          <p>3. Stanovení hasičského věnečku, a usneseno, by se pořádal v hostinci v Ouklidě dne 24. ledna t. r. a hostinský Podojil si vzal na sebe, že si sám sál upraví a zařídí. Do komité do věnečku</p>
+          <p>zvoleni byli Ant. Heran, Jan Pešta, Ant. Červenka a František Skalický, a za čestnou stráž Ant. Javůrek a František Pešek, a ujednáno, by se vzali hudebníci jeseničtí.</p>
+          <p>4. Placení příspěvků členů přispívajících, a zaplatili za rok 1907–1908: Tomáš Soukup 4 kor. za rok 1908, František Matějček 2 K za rok 1907–1908, František Melich 4 K za rok 1907–1908, František Heran 4 kor. a Josef Tůma za rok 1907–1908 též 4 koruny.</p>
+          <p>5. Volby správy sboru, a voleno následovně: ve schůzi přítomno bylo 27 členů, z nichž bylo 17 členů činných, kteřížto odevzdali 16 lístků na jméno Antonína Herana a 1 lístek na Jana Peštu, tudíž zvolen Ant. Heran velitelem sboru, kterýž se prohlásil po přání všech členů, že volbu přijímá. Do výboru z činných členů obdrželi: Frant. Všetečka 1 hlas, Soukup Emanuel 3 hl., Alois Beneš 16 hlasů, Jan Heřmánek 10 hlasů, Frant. Skalický 3 hl., Ant. Červenka 1, Pešta Jos. 1, tudíž zvoleni Alois Beneš a Jan Heřmánek. Dále se volil náměstek velitele, při čemž obdrželi: Frant. Podojil 8 hlasů, Jakob Balík 3 hlasy a Alois Beneš 6 hlasů, tudíž zvolen František Podojil, kterýž se prohlásil, že volbu přijímá. Pak voleno 2 náhradníky, a obdrželi Jan Pešta 2 hlasy, Soukup Em. 9, Všetečka Frant. 4, Jakob Balík 1 hlas, tudíž zvoleni Soukup Em. a Frant. Všetečka za náhradníky, kteříž volbu přijali. Dále voleno z pléna předseda, tudíž po přání všech členů zvolen akklamací opět Karel Chocholoušek, kterýž volbu opět přijímá. Za jednatele a pokladníka zvolen též po přání všech členů akklamací Ant. Soukup, který se prohlásil, že opět volbu přijímá. Pak voleno z pléna 2 členové výboru a dva náhradníci, při kteréž obdrželi: Josef Budka, starosta, 23 hlasů, Fr. Všetečka 4 hlasy, Josef Kymla 18 hlasů, Jan Červenka 4 hlasy, Ant. Pilík 2 hlasy, Em. Soukup 1, Josef Chlasták 2 hlasy a Ant. Chocholoušek 1, tudíž se pokládají za zvolené</p>
+          <p>Josef Budka a Josef Kymla, kteří volbu přijali. Dále voleni dva náhradníci, a obdrželi Josef Kymla 6 hlasů, Frant. Všetečka 16 hlasů, Jos. Chlasták 1 hlas, Ant. Pilík 2 hlasy, Jos. Budka 1 hlas a Frant. Skalický 1 hlas, a zvoleni byli: František Všetečka a, jelikož Josef Kymla byl zvolen do výboru, zvolen Ant. Pilík, kteřížto se prohlásili, že volbu přijímají. Tím volba skončena, a za zbrojmistra zvolen akklamací Jakub Balík, kterýž volbu přijal.</p>
+          <p>6. Volné návrhy: ve volných návrzích navrhoval br. Ant. Heran, když nepůjde sbor na výroční mši sv., aby se požádala župní správa, aby byl povolen sjezd župní do sboru hasičského v Boru, a při tom aby se založila výroční mše sv. Jelikož se žádný ke slovu nehlásil, prohlásil předseda schůzi za skončenou.</p>
+          <p class="jk-sign">Ant. Soukup, jednatel – Ant. Červenka – Jan Pešta</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">28. 2. 1909 · str. 12–13</div>
+          <h3>Výborová schůze</h3>
+          <p>Zápis o výborové schůzi dne 28. února 1909 konané za přítomnosti všech čl. výboru a hostí br. Chyby a Hrdiny.</p>
+          <p>Čten protokol schůze minulé, schválen a bez dodatku podepsán.</p>
+          <p>Sbor pořádal divadelní představení v Ouklidě, při němž vybráno na vstupném 70 K 40 h. Vydání činí 47 K 22 h. Br. Chyba upozorňuje, že ještě třeba zaplatiti 4 K za právo provozovací sehraného kusu. Pro případ urgování ponechány v pokladně 4 K. Činí tedy čistý příjem 29 K 18 h, jenž vzhledem k nutné rychlé pomoci věnován ohroženým českým menšinám v území uzavřeném.</p>
+          <p>Ve volných návrzích navrženo:</p>
+          <p>1. br. Heranem, aby zakoupeny byly 2 lezecké pásy. Přijato.</p>
+          <p>2. br. Heranem, by pořízena byla přikrývka na stříkačku. Usneseno koupiti 2 chmelové pytle na Vys. Chlumci a pověřen tím br. Podojil.</p>
+          <p>3. br. Chybou, by zakoupena domácí hasičská lékárnička.</p>
+          <p>Přijato a sestavením její pověřen br. Hrdina.</p>
+          <p>4. br. Hrdinou, by zařízen byl při sboru divadelní odbor a pro ně vhodné nové jeviště. Zavazuje se, že jeviště vymaluje sám, bude-li mu ku pomoci na nátěr podkladu a vymalování 2 pokojů povolen malíř Bouček. Přijato i s podmínkou br. učitele Hrdiny, by jeviště vždy smělo půjčeno býti učiteli v Ouklidě ku divadel. hře se školními dětmi.</p>
+          <p class="jk-sign">Chocholoušek, předseda – Frant. Podojil – Jan Heřmánek. A. Chyba, okr. has. dozorce, 13. 6. 1909.</p>
+        </div>
+        <div class="jk-entry">
+          <div class="jk-meta">13. 6. 1909 · str. 13</div>
+          <h3>Přehlídka sboru okresním dozorcem</h3>
+          <p>Při přehlídce sboru konané dne 13. 6. 1909 okres. has. dozorcem Ant. Chybou zůstává v platnosti protokol z r. 1908, 26. 4. 1908. A. Chyba</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer style="width:100%;background:var(--navy-900);margin-top:auto;">
+    <div style="max-width:1280px;margin:0 auto;padding:40px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">SDH BOR U SEDLČAN © 1906–2026</div>
+      <a href="index.html" style="color:var(--ivory-dim);font-size:13px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;">Zpět na úvod</a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var chips = document.querySelectorAll('#kr-filters button');
+    var years = document.querySelectorAll('.kr-year');
+    function show(y, push) {
+      chips.forEach(function (c) { c.classList.toggle('active', c.getAttribute('data-year') === y); });
+      years.forEach(function (a) { a.classList.toggle('hidden', !(y === 'all' || a.getAttribute('data-year') === y)); });
+      if (push) history.replaceState(null, '', y === 'all' ? location.pathname : '#rok-' + y);
+    }
+    chips.forEach(function (c) { c.addEventListener('click', function () { show(c.getAttribute('data-year'), true); }); });
+    var m = location.hash.match(/^#rok-(\d{4})$/);
+    if (m && document.getElementById('rok-' + m[1])) show(m[1], false);
+  })();
+</script>
+</body>
+</html>
