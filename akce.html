@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Akce a brigády | SDH Bor u Sedlčan</title>
+<!-- SEO -->
+<meta name="description" content="Akce a brigády SDH Bor u Sedlčan – valná hromada, hasičský ples, pálení čarodějnic, dětský den, brigády pro obec a fotogalerie z akcí.">
+<link rel="canonical" href="https://sdhbor.cz/akce.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="SDH Bor u Sedlčan">
+<meta property="og:title" content="Akce a brigády | SDH Bor u Sedlčan">
+<meta property="og:description" content="Akce a brigády SDH Bor u Sedlčan – valná hromada, hasičský ples, pálení čarodějnic, dětský den, brigády pro obec a fotogalerie z akcí.">
+<meta property="og:url" content="https://sdhbor.cz/akce.html">
+<meta property="og:image" content="https://sdhbor.cz/images/logo/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /SEO -->
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
+<link rel="stylesheet" href="css/mobile.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+  :root{
+    --navy-900:#0A121D;
+    --navy-800:#0F1B29;
+    --navy-700:#152638;
+    --ochre-500:#D98A2B;
+    --ochre-400:#E7A652;
+    --ivory:#F3EEE2;
+    --ivory-dim:#B9C0C9;
+    --line:rgba(217,138,43,0.35);
+  }
+  body{margin:0;background:var(--ivory);font-family:'Inter',system-ui,sans-serif;color:var(--navy-900);}
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;letter-spacing:0.01em;margin:0;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  a{color:inherit;text-decoration:none;}
+  .navlink{color:var(--ivory-dim);font-size:14px;font-weight:500;letter-spacing:0.02em;}
+  .navlink:hover{color:var(--ochre-400);}
+  .plate{background:var(--navy-800);border:1px solid var(--line);}
+  .card{background:#FFFFFF;border:1px solid #E4DCC9;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--ochre-500);text-transform:uppercase;}
+  .brig-row{border-radius:2px;padding:22px 24px;display:flex;gap:24px;align-items:flex-start;}
+  .brig-date{width:130px;flex-shrink:0;}
+  .brig-stats{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;}
+  .ev-row{border-radius:2px;padding:20px 24px;display:flex;gap:24px;align-items:flex-start;}
+  @media (max-width:640px){
+    .brig-row,.ev-row{flex-wrap:wrap;gap:8px 16px;}
+    .brig-date{width:auto;}
+    .brig-stats{align-items:flex-start;flex-direction:row;gap:10px;align-items:baseline;}
+  }
+  .chip-dark{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 16px;border-radius:999px;border:1px solid rgba(185,192,201,0.35);color:var(--ivory-dim);background:transparent;cursor:pointer;}
+  .chip-dark:hover{border-color:var(--ochre-400);color:var(--ochre-400);}
+  .chip-dark.active{background:var(--ochre-500);color:var(--navy-900);border-color:var(--ochre-500);}
+</style>
+
+<div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="width:100%;background:var(--navy-900);">
+    <div class="util-bar" style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">Bor 3, Nedrahovice 264 01</div>
+      <a href="mailto:sdh.bor.nedrahovice@gmail.com" class="mono" style="color:var(--ivory-dim);font-size:12px;">sdh.bor.nedrahovice@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header (shared) -->
+  <header style="width:100%;background:var(--navy-900);border-bottom:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" style="display:flex;align-items:center;gap:12px;">
+        <img src="images/logo/znak-sh-cms.png" alt="Znak hasičů" width="56" height="52" style="height:52px;width:auto;display:block;">
+        <span style="display:flex;flex-direction:column;line-height:1.15;">
+          <span style="color:var(--ochre-400);font-family:'Oswald','Arial Narrow',system-ui,sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">SDH BOR</span>
+          <span class="mono" style="color:var(--ivory-dim);font-size:12px;">U SEDLČAN</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav style="display:flex;gap:28px;align-items:center;">
+        <a href="index.html" class="navlink">Úvod</a>
+        <a href="historie.html" class="navlink">Historie</a>
+        <a href="clenove.html" class="navlink">Seznam členů</a>
+        <a href="souteze.html" class="navlink">Soutěže</a>
+        <a href="#" class="navlink" style="color:var(--ochre-400);">Akce</a>
+        <a href="kronika.html" class="navlink">Kronika</a>
+        <a href="index.html#kontakt" class="navlink">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section style="width:100%;background:var(--navy-900);">
+    <div style="max-width:1280px;margin:0 auto;padding:64px 32px 48px;display:flex;flex-direction:column;gap:16px;">
+      <div class="section-label">Akce a brigády</div>
+      <h1 style="color:var(--ivory);font-size:40px;font-weight:700;">Společenský a pracovní život sboru</h1>
+    </div>
+  </section>
+
+  <!-- Pravidelné akce -->
+  <section id="akce" style="width:100%;background:var(--ivory);">
+    <div style="max-width:1280px;margin:0 auto;padding:80px 32px 64px;display:flex;flex-direction:column;gap:32px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="section-label">Každoroční dění</div>
+        <h2 style="font-size:30px;color:var(--navy-900);">Pravidelné akce</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:20px;">
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Výroční</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Valná hromada SDH</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">Každoročně — leden/únor</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Výroční schůze sboru, hodnocení uplynulého roku, volba vedení a plánování dalšího roku. Nejdůležitější shromáždění roku.</p>
+          </div>
+        </div>
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Tradiční</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Hasičský ples</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">Každoročně — zimní měsíce</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Tradiční společenská událost pro členy sboru, jejich rodiny a přátele z obce. Živá hudba, tombola a hasičská pohostinnost.</p>
+          </div>
+        </div>
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Místní</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Pálení čarodějnic</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">30. dubna každoročně</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Sbor organizuje oblíbenou jarní slavnost pro celou obec. Táborák, zábava pro děti, opékání a přátelské setkání sousedů.</p>
+          </div>
+        </div>
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Svátky</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Výročí sboru</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">29. července (výroční)</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Každoroční připomenutí vzniku sboru k datu 29. července 1906. Při kulatých výročích slavnostní setkání s hosty z okolních sborů.</p>
+          </div>
+        </div>
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Soutěžní</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Okrsková soutěž OHS</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">Červen–srpen, každoročně</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Sbor vysílá soutěžní družstva mužů, žen a dětí na okrskové požárnické soutěže. Závodí se v útoku na čas.</p>
+          </div>
+        </div>
+
+        <div class="card" style="border-radius:2px;overflow:hidden;">
+          <div style="height:6px;background:var(--ochre-500);"></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag">Schůze</span>
+            <h3 style="font-size:18px;color:var(--navy-900);">Schůze výboru</h3>
+            <span class="mono" style="font-size:12px;color:var(--ochre-500);">Pravidelně po celý rok</span>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;">Pravidelná setkání vedení sboru — příprava akcí, řešení provozních záležitostí, brigád a soutěžních přihlášek.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Brigády a akce -->
+  <section style="width:100%;background:var(--navy-700);">
+    <div style="max-width:1280px;margin:0 auto;padding:72px 32px 88px;display:flex;flex-direction:column;gap:32px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="section-label">Práce pro obec a život v obci</div>
+        <h2 style="font-size:30px;color:var(--ivory);">Brigády a proběhlé akce</h2>
+        <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;max-width:700px;font-style:italic;">„Sbor vykonává brigádnické práce v obci nejen v době nouze, ale i preventivně — údržba, příprava a pomoc spoluobčanům."</p>
+      </div>
+
+      <div id="year-filters" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"></div>
+
+      <div id="akce-list" style="display:flex;flex-direction:column;gap:12px;"></div>
+    </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer style="width:100%;background:var(--navy-900);margin-top:auto;">
+    <div style="max-width:1280px;margin:0 auto;padding:40px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">SDH BOR U SEDLČAN © 1906–2026 · IČO 66325366 · Spolkový rejstřík L 33853 vedený Městským soudem v Praze</div>
+      <a href="index.html" style="color:var(--ivory-dim);font-size:13px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;">Zpět na úvod</a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  var all = [
+ {
+  "year": "2026",
+  "date": "30. 9. 2026",
+  "kind": "BRIGÁDA",
+  "title": "Stavba přístřešku na uskladnění dřeva",
+  "desc": "Stavba přístřešku na uskladnění dřeva u hasičárny — výkop základů, osazení patek a betonáž základové desky.",
+  "hours": "",
+  "people": "",
+  "detail": "stavba-pristresku-2026.html"
+ },
+ {
+  "year": "2026",
+  "date": "16. 9. 2026",
+  "kind": "AKCE",
+  "title": "Nové dveře u kapličky",
+  "desc": "Výměna dveří u kapličky.",
+  "hours": "",
+  "people": "",
+  "detail": "nove-dvere-kaplicka-2026.html"
+ },
+ {
+  "year": "2026",
+  "date": "5. 9. 2026",
+  "kind": "AKCE",
+  "title": "120 let výročí SDH Bor a setkání rodáků",
+  "desc": "Oslava 120 let od založení sboru spojená se setkáním rodáků – mše u kapličky, hudba (Mafia, Pecky z avokáda, Dick O’Brass, Něžné basy), jídlo a zábava až do rána.",
+  "hours": "",
+  "people": "",
+  "detail": "120-let-sdh-bor-2026.html"
+ },
+ {
+  "year": "2025",
+  "date": "6. 12. 2025",
+  "kind": "BRIGÁDA",
+  "title": "Odklízení polomů u Sedleckého potoka",
+  "desc": "Brigáda 25 členů na odklizení stromů a křovin polámaných větrem – příprava přemostění potoka a napojení na cyklostezku.",
+  "hours": "",
+  "people": "",
+  "detail": "odklizeni-polomu-2025.html"
+ },
+ {
+  "year": "2025",
+  "date": "29. 11. 2025",
+  "kind": "AKCE",
+  "title": "Koncert ženského sboru Krásky",
+  "desc": "Koncert v komunitním centru v Boru.",
+  "hours": "",
+  "people": "",
+  "detail": "koncert-krasky-2025.html"
+ },
+ {
+  "year": "2025",
+  "date": "6. 9. 2025",
+  "kind": "AKCE",
+  "title": "Opékání prasete",
+  "desc": "Poděkování za celoroční práci všem členům SDH a obyvatelům Boru, Rudolce a Úklidu.",
+  "hours": "",
+  "people": "",
+  "detail": "opekani-prasete-2025.html"
+ },
+ {
+  "year": "2025",
+  "date": "5.–9. 7. 2025",
+  "kind": "AKCE",
+  "title": "Rudolecká padlinka 2025",
+  "desc": "Šestý ročník letního soustředění dětských hasičů na Rudolci, asi 25 dětí.",
+  "hours": "",
+  "people": "",
+  "detail": "rudolecka-padlinka-2025.html"
+ },
+ {
+  "year": "2025",
+  "date": "22. 3. 2025",
+  "kind": "BRIGÁDA",
+  "title": "Kácení jasanů podél silnice č. 120",
+  "desc": "Brigáda 15 členů SDH Bor spolu s SDH Nedrahovice, za úplné uzavírky silnice.",
+  "hours": "",
+  "people": "",
+  "detail": "kaceni-jasanu-2025.html"
+ },
+ {
+  "year": "2024",
+  "date": "26. 10. 2024",
+  "kind": "BRIGÁDA",
+  "title": "Úprava břehu Sedleckého potoka",
+  "desc": "Vyčištění břehu a zpřístupnění místa pro budoucí přechod na cyklostezku.",
+  "hours": "",
+  "people": "",
+  "detail": "uprava-brehu-potoka-2024.html"
+ },
+ {
+  "year": "2024",
+  "date": "červenec 2024",
+  "kind": "AKCE",
+  "title": "Rudolecká padlinka 2024",
+  "desc": "Pátý ročník tábora pro děti na Rudolci.",
+  "hours": "",
+  "people": "",
+  "detail": "rudolecka-padlinka-2024.html"
+ },
+ {
+  "year": "2024",
+  "date": "16. 3. 2024",
+  "kind": "AKCE",
+  "title": "Pochod hospodami",
+  "desc": "Hasiči hostili účastníky pochodu Sedlčany – Jesenice v komunitním centru.",
+  "hours": "",
+  "people": "",
+  "detail": "pochod-hospodami-2024.html"
+ },
+ {
+  "year": "2023",
+  "date": "2. 9. 2023",
+  "kind": "AKCE",
+  "title": "Slavnostní otevření komunitního centra",
+  "desc": "Otevření přestavěné hasičárny za účasti hostů, s programem dětí, ukázkou hasičského sportu a večerní zábavou.",
+  "hours": "",
+  "people": "",
+  "detail": "otevreni-komunitniho-centra-2023.html"
+ },
+ {
+  "year": "2023",
+  "date": "červenec 2023",
+  "kind": "AKCE",
+  "title": "Rudolecká padlinka 2023",
+  "desc": "Čtvrtý ročník tábora – koupání v Olešňáku, jelení obora a Olympionáda.",
+  "hours": "",
+  "people": "",
+  "detail": "rudolecka-padlinka-2023.html"
+ },
+ {
+  "year": "2023",
+  "date": "18. 2. 2023",
+  "kind": "AKCE",
+  "title": "Masopustní průvod",
+  "desc": "Masopust se vrátil do Úklidu, Boru a Rudolce.",
+  "hours": "",
+  "people": "",
+  "detail": "masopust-2023.html"
+ },
+ {
+  "year": "2022",
+  "date": "září–listopad 2022",
+  "kind": "BRIGÁDA",
+  "title": "Bourání staré hasičárny",
+  "desc": "Vyklízení a bourání hasičárny před stavbou komunitního centra, brigády každou sobotu.",
+  "hours": "",
+  "people": "",
+  "detail": "bourani-hasicarny-2022.html"
+ },
+ {
+  "year": "2022",
+  "date": "9.–13. 7. 2022",
+  "kind": "AKCE",
+  "title": "Rudolecká padlinka 2022",
+  "desc": "Třetí ročník soustředění dětských hasičů – kurz první pomoci, výlet do Počepic, vodní tobogan.",
+  "hours": "",
+  "people": "",
+  "detail": "rudolecka-padlinka-2022.html"
+ },
+ {
+  "year": "2021",
+  "date": "červenec 2021",
+  "kind": "AKCE",
+  "title": "Rudolecká padlinka 2021",
+  "desc": "Druhý ročník dětského hasičského soustředění se sokolníky.",
+  "hours": "",
+  "people": "",
+  "detail": "rudolecka-padlinka-2021.html"
+ },
+ {
+  "year": "2020",
+  "date": "15. 7. 2020",
+  "kind": "AKCE",
+  "title": "První dětské hasičské soustředění",
+  "desc": "Malý hasičský tábor u Pavla Roškota na Rudolci pro 20 dětí.",
+  "hours": "",
+  "people": "",
+  "detail": "hasicske-soustredeni-2020.html"
+ },
+ {
+  "year": "2018",
+  "date": "18. 9. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Výstavba autobusových zastávek",
+  "desc": "V Boru začala výstavba autobusových zastávek.",
+  "hours": "",
+  "people": "",
+  "detail": "zastavky-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "2018",
+  "kind": "AKCE",
+  "title": "Letní posezení",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "letni-posezeni-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "12. 5. 2018",
+  "kind": "AKCE",
+  "title": "Dětský den — 100 let od vzniku republiky",
+  "desc": "Slavnostní den ke 100. výročí vzniku Československé republiky spojený s dětským dnem a večerní zábavou. Na stanovištích soutěžilo 105 dětí.",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "14. 1. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Sběr železného šrotu",
+  "desc": "Sběr železného šrotu v Boru a Rudolci, zároveň byla vyčištěna vana na šrot (10:00–11:30). Účast: Budka Lubomír, Neužil Jiří st., Pešta Vladimír ml., Roškot Luděk, Roškot Luděk ml., Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Štemberk Josef, Všetečka Jan, Zemánek Martin.",
+  "hours": "16,5 h",
+  "people": "11 účastníků",
+  "detail": "zelezny-srot-2018.html"
+ },
+ {
+  "year": "2018",
+  "date": "13. 1. 2018",
+  "kind": "BRIGÁDA",
+  "title": "Odvoz a třídění kamenů",
+  "desc": "Odvoz kamení z Nedrahovic na stavbu čekáren a třídění kamenů (9:00–11:30). Účast: Budka Lubomír, Pešta Josef, Pešta Vladimír ml., Rataj Luboš, Roškot Luděk, Roškot Zdeněk, Skalický Milan, Skalický Zdeněk, Spilka Vladimír ml., Spilka Vladimír nejml., Všetečka Jan, Zemánek Martin.",
+  "hours": "30 h",
+  "people": "12 účastníků",
+  "detail": "kameni-cekarny-2018.html"
+ },
+ {
+  "year": "2017",
+  "date": "30. 4. 2017",
+  "kind": "AKCE",
+  "title": "Čarodějnice",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "carodejnice-2017.html"
+ },
+ {
+  "year": "2014",
+  "date": "2014",
+  "kind": "AKCE",
+  "title": "Dětský den v Boru",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2014.html"
+ },
+ {
+  "year": "2013",
+  "date": "29. 6. 2013",
+  "kind": "AKCE",
+  "title": "Dětský den",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2013.html"
+ },
+ {
+  "year": "2013",
+  "date": "2. 6. 2013",
+  "kind": "BRIGÁDA",
+  "title": "Povodeň",
+  "desc": "Pomoc sboru při povodni v Boru.",
+  "hours": "",
+  "people": "",
+  "detail": "povoden-2013.html"
+ },
+ {
+  "year": "2012",
+  "date": "6. 10. 2012",
+  "kind": "AKCE",
+  "title": "Farmářské slavnosti",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "farmarske-slavnosti-2012.html"
+ },
+ {
+  "year": "2012",
+  "date": "26. 5. 2012",
+  "kind": "AKCE",
+  "title": "Dětský den",
+  "desc": "",
+  "hours": "",
+  "people": "",
+  "detail": "detsky-den-2012.html"
+ },
+ {
+  "year": "2005",
+  "date": "20. 9. 2005",
+  "kind": "BRIGÁDA",
+  "title": "Nové nástěnky v hasičárně",
+  "desc": "Instalace nových nástěnek v hasičárně.",
+  "hours": "",
+  "people": "",
+  "detail": "nastenky-hasicarna-2005.html"
+ },
+ {
+  "year": "2005",
+  "date": "13. 8. a 10. 9. 2005",
+  "kind": "BRIGÁDA",
+  "title": "Stavba krbu",
+  "desc": "Stavba venkovního krbu.",
+  "hours": "",
+  "people": "",
+  "detail": "stavba-krbu-2005.html"
+ },
+ {
+  "year": "Pravidelně",
+  "date": "Pravidelně",
+  "kind": "BRIGÁDA",
+  "title": "Údržba zbrojnice a okolí",
+  "desc": "Pravidelné úklidové a údržbové práce u zbrojnice a v okolí — sekání trávy, úklid, drobné opravy.",
+  "hours": "",
+  "people": "",
+  "detail": "udrzba-zbrojnice.html"
+ }
+];
+  var yearOptions = ["Vše", "2026", "2025", "2024", "2023", "2022", "2021", "2020", "2018", "2017", "2014", "2013", "2012", "2005"];
+  var selectedYear = 'Vše';
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function render() {
+    var fw = document.getElementById('year-filters');
+    fw.innerHTML = '<span class="mono" style="font-size:12px;color:var(--ivory-dim);letter-spacing:0.1em;">ROK:</span>';
+    yearOptions.forEach(function (y) {
+      var b = document.createElement('button');
+      b.className = 'chip-dark' + (y === selectedYear ? ' active' : '');
+      b.textContent = y;
+      b.addEventListener('click', function () { selectedYear = y; render(); });
+      fw.appendChild(b);
+    });
+    var list = document.getElementById('akce-list'); list.innerHTML = '';
+    all.filter(function (r) { return selectedYear === 'Vše' || r.year === selectedYear; }).forEach(function (r) {
+      var d = document.createElement('div'); d.className = 'plate brig-row';
+      d.innerHTML =
+        '<div class="brig-date" style="display:flex;flex-direction:column;gap:6px;">' +
+          '<span class="mono" style="color:var(--ochre-400);font-size:14px;">' + esc(r.date) + '</span>' +
+          '<span class="mono" style="color:var(--ivory-dim);font-size:10px;letter-spacing:0.12em;">' + esc(r.kind) + '</span>' +
+        '</div>' +
+        '<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:6px;min-width:0;">' +
+          '<span style="color:var(--ivory);font-weight:600;font-size:16px;">' + esc(r.title) + '</span>' +
+          (r.desc ? '<span style="color:var(--ivory-dim);font-size:13px;line-height:1.6;">' + esc(r.desc) + '</span>' : '') +
+          '<a href="' + r.detail + '" class="mono" style="color:var(--ochre-400);font-size:12px;font-weight:600;border-bottom:1px solid var(--ochre-400);width:fit-content;margin-top:2px;">Detail \u2192</a>' +
+        '</div>' +
+        (r.hours ? '<div class="brig-stats"><span class="mono" style="color:var(--ochre-400);font-size:18px;font-weight:600;">' + esc(r.hours) + '</span><span class="mono" style="color:var(--ivory-dim);font-size:11px;">' + esc(r.people) + '</span></div>' : '');
+      list.appendChild(d);
+    });
+  }
+  render();
+</script>
+<script src="js/menu.js"></script>
+</body>
+</html>

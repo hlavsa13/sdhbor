@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Kronika obce 2020–2025 | SDH Bor u Sedlčan</title>
+<!-- SEO -->
+<meta name="description" content="Zápisy z obecní kroniky Boru, Úklidu a Rudolce z let 2020–2025 – brigády, soutěže, Rudolecká padlinka, komunitní centrum a život v obci.">
+<link rel="canonical" href="https://sdhbor.cz/kronika.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="SDH Bor u Sedlčan">
+<meta property="og:title" content="Kronika obce 2020–2025 | SDH Bor u Sedlčan">
+<meta property="og:description" content="Zápisy z obecní kroniky Boru, Úklidu a Rudolce z let 2020–2025 – brigády, soutěže, Rudolecká padlinka, komunitní centrum a život v obci.">
+<meta property="og:url" content="https://sdhbor.cz/kronika.html">
+<meta property="og:image" content="https://sdhbor.cz/images/logo/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /SEO -->
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
+<link rel="stylesheet" href="css/mobile.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+  :root{
+    --navy-900:#0A121D;
+    --navy-800:#0F1B29;
+    --navy-700:#152638;
+    --ochre-500:#D98A2B;
+    --ochre-400:#E7A652;
+    --ivory:#F3EEE2;
+    --ivory-dim:#B9C0C9;
+    --line:rgba(217,138,43,0.35);
+  }
+  body{margin:0;background:var(--ivory);font-family:'Inter',system-ui,sans-serif;color:var(--navy-900);}
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;letter-spacing:0.01em;margin:0;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  a{color:inherit;text-decoration:none;}
+  .navlink{color:var(--ivory-dim);font-size:14px;font-weight:500;letter-spacing:0.02em;}
+  .navlink:hover{color:var(--ochre-400);}
+  .plate{background:var(--navy-800);border:1px solid var(--line);}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
+  .win-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--navy-900);background:var(--ochre-500);padding:4px 10px;border-radius:2px;white-space:nowrap;}
+  .btn-primary{background:var(--ochre-500);color:var(--navy-900);}
+  .btn-primary:hover{background:var(--ochre-400);}
+  .people-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:10px;}
+  @media (max-width:640px){ .people-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  .results-grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:24px;}
+  @media (max-width:640px){ .results-grid{grid-template-columns:1fr;} }
+  .gallery-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px;align-items:start;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:480px){ .gallery-grid{grid-template-columns:1fr;} }
+  .chip-dark{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 16px;border-radius:999px;border:1px solid rgba(185,192,201,0.35);color:var(--ivory-dim);background:transparent;cursor:pointer;}
+  .chip-dark:hover{border-color:var(--ochre-400);color:var(--ochre-400);}
+  .chip-dark.active{background:var(--ochre-500);color:var(--navy-900);border-color:var(--ochre-500);}
+  .kr-year{display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px;}
+  .kr-year.hidden{display:none;}
+  .kr-year:not(.hidden) ~ .kr-year:not(.hidden){border-top:1px solid #E4DCC9;padding-top:56px;}
+  .kr-num{font-family:'Oswald',system-ui,sans-serif;font-size:56px;font-weight:700;line-height:1;color:var(--ochre-500);}
+  .kr-year p{font-size:16px;line-height:1.8;color:#3B3226;margin:0;}
+  .kr-box{background:#FFFFFF;border:1px solid #E4DCC9;border-left:3px solid var(--ochre-500);border-radius:2px;padding:20px 24px;display:flex;flex-direction:column;gap:12px;}
+  .kr-res{display:grid;grid-template-columns:150px 1fr;gap:8px 20px;font-size:14px;line-height:1.6;color:#3B3226;}
+  .kr-res dt{font-weight:600;color:var(--navy-900);}
+  .kr-res dd{margin:0;}
+  .kr-res b{color:var(--navy-900);}
+  .kr-facts{display:grid;grid-template-columns:1fr auto;gap:8px 24px;font-size:14px;line-height:1.6;color:#3B3226;}
+  .kr-facts span:nth-child(2n){font-family:'JetBrains Mono',monospace;color:var(--navy-900);font-weight:600;text-align:right;}
+  @media (max-width:640px){ .kr-num{font-size:44px;} .kr-res{grid-template-columns:1fr;gap:2px;} .kr-res dd{margin-bottom:8px;} .kr-facts{grid-template-columns:1fr;gap:2px;} .kr-facts span:nth-child(2n){text-align:left;margin-bottom:8px;} }
+  .kr-tabs{display:flex;gap:28px;flex-wrap:wrap;padding-top:4px;}
+  .kr-tab{font-size:15px;font-weight:600;color:var(--ivory-dim);padding-bottom:6px;border-bottom:2px solid transparent;}
+  .kr-tab:hover{color:var(--ochre-400);}
+  .kr-tab.active{color:var(--ivory);border-bottom-color:var(--ochre-500);}
+  .kr-tab span{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:400;margin-left:6px;color:var(--ochre-400);}
+</style>
+
+<div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
+
+  <!-- Utility bar -->
+  <div style="width:100%;background:var(--navy-900);">
+    <div class="util-bar" style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">Bor 3, Nedrahovice 264 01</div>
+      <a href="mailto:sdh.bor.nedrahovice@gmail.com" class="mono" style="color:var(--ivory-dim);font-size:12px;">sdh.bor.nedrahovice@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header (shared) -->
+  <header style="width:100%;background:var(--navy-900);border-bottom:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" style="display:flex;align-items:center;gap:12px;">
+        <img src="images/logo/znak-sh-cms.png" alt="Znak hasičů" width="56" height="52" style="height:52px;width:auto;display:block;">
+        <span style="display:flex;flex-direction:column;line-height:1.15;">
+          <span style="color:var(--ochre-400);font-family:'Oswald','Arial Narrow',system-ui,sans-serif;font-weight:600;font-size:22px;letter-spacing:0.02em;">SDH BOR</span>
+          <span class="mono" style="color:var(--ivory-dim);font-size:12px;">U SEDLČAN</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav style="display:flex;gap:28px;align-items:center;">
+        <a href="index.html" class="navlink">Úvod</a>
+        <a href="historie.html" class="navlink">Historie</a>
+        <a href="clenove.html" class="navlink">Seznam členů</a>
+        <a href="souteze.html" class="navlink">Soutěže</a>
+        <a href="akce.html" class="navlink">Akce</a>
+        <a href="#" class="navlink" style="color:var(--ochre-400);">Kronika</a>
+        <a href="index.html#kontakt" class="navlink">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section style="width:100%;background:var(--navy-900);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 40px;display:flex;flex-direction:column;gap:16px;">
+      <div class="section-label">Kronika</div>
+      <h1 style="color:var(--ivory);font-size:40px;font-weight:700;">Z kroniky obce</h1>
+      <nav class="kr-tabs" aria-label="Části kroniky">
+        <a href="kronika.html" class="kr-tab active">Kronika obce<span>2020–2025</span></a>
+        <a href="jednaci-kniha.html" class="kr-tab">Jednací kniha sboru<span>1906–1948</span></a>
+      </nav>
+      <p style="color:var(--ivory-dim);font-size:15px;line-height:1.7;margin:0;">Zápisy z obecní kroniky od roku 2020.</p>
+      <div id="kr-filters" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px;">
+        <span class="mono" style="font-size:12px;color:var(--ivory-dim);letter-spacing:0.1em;">ROK:</span>
+        <button class="chip-dark active" data-year="all">Vše</button>
+        <button class="chip-dark" data-year="2025">2025</button>
+        <button class="chip-dark" data-year="2024">2024</button>
+        <button class="chip-dark" data-year="2023">2023</button>
+        <button class="chip-dark" data-year="2022">2022</button>
+        <button class="chip-dark" data-year="2021">2021</button>
+        <button class="chip-dark" data-year="2020">2020</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kronika -->
+  <section style="width:100%;background:var(--ivory);">
+    <div style="max-width:900px;margin:0 auto;padding:64px 32px 80px;display:flex;flex-direction:column;gap:56px;">
+      <article class="kr-year" id="rok-2025" data-year="2025">
+        <h2 class="kr-num">2025</h2>
+        <p>Rok 2025 byl tradičně zahájen výroční valnou hromadou první lednovou sobotu, 4. 1. 2025. Členové zhodnotili uplynulý rok – provedené brigády, účast na soutěžích i akce, které v předešlém roce proběhly.</p>
+        <p>Dne 13. 1. 2025 se v komunitním centru v Boru uskutečnila beseda s poslankyní Ing. Barborou Urbanovou (STAN – Starostové a nezávislí). Beseda byla velmi zajímavá a s paní poslankyní byla domluvena prohlídka Poslanecké sněmovny Parlamentu ČR, která proběhla 24. 3. 2025.</p>
+        <p>Hned první březnový den vedl přes Bor pochod krajem sedlčanských hospod – šestnáctikilometrová trasa ze Sedlčan do Jesenice se zastávkami a pohoštěním. V Boru čekala na účastníky horká polévka, steaky, hermelín a pití na posilněnou do dalších kilometrů.</p>
+        <p>První brigáda roku se uskutečnila 22. 3. 2025 za účasti 15 členů SDH Bor. Kácely se vzrostlé jasany podél silnice č. 120; kácení se zúčastnil i SDH Nedrahovice a akce si vyžádala úplnou uzavírku silnice.</p>
+        <p>Hned následující brigáda, 29. 3. 2025, byla věnována likvidaci křoví podél silnice z Boru do Úklidu. Zúčastnilo se jí 21 členů. Křoví se naložilo na valník a odvezlo na místo pálení čarodějnic, kde se navezené dřevo 30. 4. 2025 spálilo. Nechybělo ani tradiční opékání buřtů.</p>
+        <p>Okrsková soutěž se letos konala v Jesenici. Družstvo žen obsadilo 2. místo, muži 4. místo, mladší děti 1. místo, starší děti 2. místo a muži do 35 let 5., tedy poslední místo. Muži do 35 let běželi útok se třemi béčky, na což naše mašina neměla dost sil – proudaři čekali zhruba 10 vteřin, než doběhla voda. Protože nikdo nemá ambice na velké sportovní výkony, o nákupu silnějšího stroje se neuvažuje.</p>
+        <p>Rudolecká padlinka se konala 5.–9. 7. 2025 a šlo už o šestý ročník. Nejstarší děti ze sboru se už nezúčastnily, přibyly ale nové mladší děti, takže celkový počet se pohyboval kolem 25. Program byl nabitý – malování na obličej, návštěva Policie ČR, ukázka výcviku dravých ptáků a spousta her a soutěží.</p>
+        <p>V létě se v komunitním centru uskutečnil večer s country kapelou Brd Band, která hrála k tanci i poslechu. Akce měla úspěch, a proto se 24. 10. 2025 dočkala opakování.</p>
+        <p>První zářijovou sobotu, 6. 9. 2025, se konalo opékání prasete jako poděkování za celoroční práci všem členům SDH a obyvatelům Boru, Rudolce a Úklidu.</p>
+        <p>Další soutěží, které se SDH Bor zúčastnil, byla Martinická osma. Sbor postavil družstvo mladších a starších dětí – mladší obsadili krásné první místo, starší třetí. Družstvo žen skončilo na třetím (posledním) místě a muži rovněž na posledním, pátém. Potvrdilo se tak, že v Martinicích se nám tradičně nedaří.</p>
+        <p>Dne 20. 9. 2025 se v Dobrošovicích konal 45. ročník soutěže o pohár starosty OSH Příbram pro ženy a 22. ročník Putovního poháru vedoucího odborné rady represe OSH Příbram pro muže. U žen soutěž zohledňuje věk – podle věku soutěžících se od výsledného času odečítají bonifikační sekundy. Všichni soutěžili na stejných strojích, aby měli stejné podmínky. Ženy obsadily 4. místo ze šesti družstev, muži 5. místo ze sedmi.</p>
+        <p>Tradiční výjezdní zasedání se konalo 1.–5. 10. 2025, tentokrát ve Znojmě. Na tento termín připadly i volby do Poslanecké sněmovny, a tak si členové zajistili voličské průkazy a volili mimo bydliště. Počasí bylo převážně slunečné, ale velmi chladné – ráno byla tráva pokrytá jinovatkou. Prodloužený víkend vyplnily vyjížďky na kole, procházky a návštěvy vinařství i kulturních památek.</p>
+        <p>V kotelně ve sklepě hasičárny hasiči vyměnili kotel za jiný, který věnoval Josef Pešta. Nový kotel je delší, takže už není nutné připravené dřevo zkracovat. Vstup do sklepa je úzký a prostor pro manévrování velmi omezený, vše se proto muselo zvládnout bez techniky. Akce se vydařila díky organizaci Zdeňka Skalického.</p>
+        <p>Poslední listopadový den patřil v komunitním centru koncertu ženského sboru Krásky. Sbor zahájil činnost v lednu 2012 netradičně – natočením CD Krásná moja milá se skladbami A. Dvořáka, B. Smetany, J. Myslivečka a J. Křičky. Bývalé sólistky Příbramského dětského sboru jím chtěly uctít památku sbormistra Vladimíra Vepřeka, pod jehož vedením všechny zpívaly. Kmenový repertoár tvoří zejména Dvořákovy Moravské dvojzpěvy, Pergolesiho Stabat mater a lidové písně ve dvojhlasých i tříhlasých úpravách. Na klavír či varhany sbor doprovází rožmitálská učitelka hudby Vladimíra Štěpánová, zakladatelkou a vedoucí sboru je Zuzana Horská. Koncert měl velký úspěch a uvažuje se o jeho každoročním opakování, případně spojeném s rozsvěcením vánočního stromu v Boru.</p>
+        <p>V předvečer svátku svatého Mikuláše přišel do Boru Mikuláš se dvěma čerty. Děti mu přednesly básničky a zazpívaly písničky a za své výkony dostaly sladkosti, aby jim bylo čekání na Ježíška příjemnější.</p>
+        <p>Hned druhý den, 6. 12. 2025, se konala předposlední brigáda roku. Bylo třeba odklidit stromy a křoviny vyvrácené a polámané letošními silnými větry. Odstranění polomů je součástí snahy o přemostění Sedleckého potoka a napojení na cyklostezku, která vede po druhém břehu ze Sedlčan do Sedlce-Prčice. Brigády se zúčastnilo 25 členů a k občerstvení se opékaly buřty. Kmeny byly rozřezány a uskladněny na kraji pole; odvezly se 31. 12. 2025, kdy bylo pole zamrzlé. Večer se v hasičárně konalo rozloučení s rokem 2025.</p>
+        <div class="kr-box">
+          <div class="section-label" style="font-size:12px;">Rok v číslech</div>
+          <div class="kr-facts"><span>Dotace Národní sportovní agentury (Můj klub)</span><span>dresy pro 19 dětí</span><span>Obyvatelé Boru</span><span>přibyl jeden občan, nezemřel nikdo z místních</span></div>
+        </div>
+      </article>
+
+      <article class="kr-year" id="rok-2024" data-year="2024">
+        <h2 class="kr-num">2024</h2>
+        <p>Začátkem roku proběhla v komunitním centru v Boru valná hromada SDH Bor, která schválila přijetí nových členů – Věrky Havlové a Jana Jaňovky. Věrka se pravidelně účastní brigád a je spolehlivou pravou rukou při tréninku mladších hasičů. Jan Jaňovka jezdí do Boru na chalupu č. p. 8 a pravidelně chodí na brigády i na společenské akce sboru. Novým velitelem byl jednomyslně zvolen Pavel Roškot. Ve výboru SDH zůstává starostou Ing. Vladimír Pešta, velitelem a jednatelem je Pavel Roškot a hospodářem Ing. Pavel Hlávka.</p>
+        <p>Dne 12. 1. 2024 byly na Rudolci ořezány vzrostlé stromy, které hrozily pádem (naproti Roškotovým, u domu manželů Bartákových). Hned další den, 13. 1. 2024, proběhl svoz železného šrotu.</p>
+        <p>Komunitní centrum prošlo 16. 3. 2024 zatěžkávací zkouškou – hasiči v něm hostili účastníky pochodu hospodami na trase Sedlčany – Jesenice. Podávaly se kuřecí a vepřové steaky, zelňačka, grilovaný hermelín a další pochutiny a nápoje. Akce se vydařila a přinesla nápady na vylepšení pro další ročníky i podobné akce.</p>
+        <p>Kvůli suchu platil v obvyklém termínu pálení čarodějnic zákaz rozdělávání ohňů. V týdnu po 30. 4. naštěstí zapršelo, a tak se oheň zapálil 4. 5. 2024. Zájemci si mohli opéct buřty v krbu u hasičárny, dát si pivo a užít si společné setkání.</p>
+        <p>Po výměně termínu se SDH Mezné pořádal SDH Bor letos okrskovou soutěž. Útoky se běžely na poli vedle hasičárny, časomíru zapůjčil SDH Dobrošovice a celým dnem provázel jako moderátor Pavel Roškot. Počasí akci příliš nepřálo, ale díky skvělé organizaci a výbornému pohoštění se soutěž vydařila.</p>
+        <div class="kr-box">
+          <div class="section-label" style="font-size:12px;">Výsledky okrskové soutěže v Boru</div>
+          <dl class="kr-res" style="margin:0;">
+            <dt>Mladší děti</dt><dd><b>1. Bor A</b>, <b>2. Bor B</b></dd>
+            <dt>Starší děti</dt><dd>1. Dobrošovice I, 2. Dobrošovice II, 3. Nedrahovice, <b>4. Bor</b></dd>
+            <dt>Ženy</dt><dd>1. Nedrahovice st., 2. Nedrahovice ml., <b>3. Bor</b></dd>
+            <dt>Muži do 35 let</dt><dd>1. Jesenice, 2. Nedrahovice, 3. Mezné, 4. Dobrošovice, <b>5. Bor</b>, 6. Kamenice</dd>
+            <dt>Muži nad 35 let</dt><dd>1. Dobrošovice, <b>2. Bor</b>, 3. Nedrahovice, 4. Mezné</dd>
+          </dl>
+        </div>
+        <p>Děti SDH Bor se zúčastnily také nočního požárního útoku v Dobrošovicích, kde obě družstva – mladší i starší – obsadila 1. místo. V září byly děti úspěšné i na soutěži v Martinicích: mladší tým skončil druhý, starší třetí.</p>
+        <p>V červenci proběhl už 5. ročník tábora Rudolecká padlinka, který pořádají manželé Roškotovi. Pět dní děti soutěžily, tvořily a užívaly si na Rudolci. O domácí stravu se vzorně starala Hana Roškotová, zázemí zajistila Petra Roškotová a program tábora měl na starosti Pavel Roškot s velkou podporou Jitky Mošničkové.</p>
+        <p>První zářijovou sobotu se konalo loučení s prázdninami u pečeného prasete a současně sběr železného šrotu.</p>
+        <p>Občané se spolu s obcí delší dobu snaží zpřístupnit cyklostezku přes Rudolec, kde je nutné překonat Sedlecký potok. Na rudolecké straně byla zpevněna cesta a 26. 10. 2024 proběhla brigáda na vyčištění břehu a zpřístupnění místa, kde by mohl vzniknout přechod na sedlčanskou stranu.</p>
+        <p>Kvůli špatné akustice bylo nutné upravit společenskou místnost komunitního centra – zvuk se odrážel a ztěžoval hovor i porozumění. Na strop se proto nalepily melaminové desky a na obvodové stěny se pověsily dřevěné akustické panely, které za výhodnou cenu dodal pan Šoltés. Na instalaci ještě čekají zvukotěsné závěsy, které tlumení hluku dokončí.</p>
+        <p>Po dvou letech se návštěva Mikuláše, čertů a anděla konala opět v komunitním centru. Přestože se některé děti bály, společnou fotku se všemi nadpřirozenými bytostmi si nenechaly ujít.</p>
+        <p>Na sklonku roku vystoupily borské děti a děti z okolí pod vedením Jiřího Kváči a předvedly, co nacvičily na pravidelných zkouškách. Drobné nedostatky nikdo neřešil a všichni byli odměněni potleskem. Připraveno bylo malé pohoštění a po vystoupení následovala družná zábava.</p>
+        <p>Konec roku se nesl ve znamení silvestrovského veselí. Bohaté občerstvení, dostatek pití a hudba v podání Dany Liškové jsou už samozřejmostí. Rok 2024 zůstal za námi a nový rok 2025 jsme přivítali, jak se patří.</p>
+      </article>
+
+      <article class="kr-year" id="rok-2023" data-year="2023">
+        <h2 class="kr-num">2023</h2>
+        <p>Rok 2023 jsme přivítali výroční schůzí, kterou SDH Bor kvůli výstavbě komunitního centra uspořádal s přispěním rodiny Roškotových v jejich skladu na Rudolci. Starosta SDH Vladimír Pešta ml. shrnul činnost sboru za uplynulý rok, velitel Jiří Neužil st. přednesl zprávu o účasti a umístění družstev na soutěžích a hospodář Pavel Hlávka informoval o hospodaření sboru. Iveta Skalická seznámila členy s možnostmi dotací pro dětská družstva.</p>
+        <p>Jako host vystoupil starosta obce Nedrahovice Čestmír Sosnovec. Ocenil úspěšnou reprezentaci SDH Bor, poděkoval za pomoc s občerstvením při slavnosti u nových rybníků nad Kamenicí a zhodnotil průběh výstavby kulturního centra v Boru. K občerstvení se podával katův šleh a pivo, ke kávě koláče, bábovky a další dobroty od místních hospodyněk.</p>
+        <p>Přestavba hasičárny na komunitní centrum úspěšně pokračovala. V lednu byly osazeny střešní vazníky, střecha se zakryla plachtou proti dešti a sněhu a osadila se okna a dveře. Hned 21. 1. 2023 proběhl sběr šrotu.</p>
+        <p>Do Úklidu, Boru a Rudolce se letos vrátil masopustní průvod – tradiční maškarní veselí, které se koná mezi svátkem Tří králů a Popeleční středou. Průvod vyšel 18. 2. 2023 ve 13 hodin z návsi v Úklidě a zastavoval se u jednotlivých stavení, kde maškary za doprovodu hudby tancovaly s hospodyněmi a ty jim na oplátku nabízely pohoštění. Z Úklidu se přesunul do Boru, kde se obyvatelé sešli na návsi u společenské čekárny – tančilo se, zpívalo, popíjelo a debatovalo. Hudbu obstarali Zdeněk Havlíček (harmonika) a jeho manželka Štěpánka (trubka). Masopustní taškařice skončila na Rudolci ve skladu u Pavla Roškota, kde se všichni posilnili párkem a polévkou. Za zdařilou organizaci patří dík Martinu Zemánkovi.</p>
+        <p>Na přelomu března a dubna (25. 3., 1. 4. a 29. 4.) probíhaly brigády na prořez uschlých stromů a vyčištění vzrostlého křoví podél cesty „Na čarodějnice“. Shrabalo se i listí, které přes zimu navál vítr k pomníku padlým v první světové válce.</p>
+        <p>Na konci dubna se pořezané větve spálily při pálení čarodějnic na obvyklém místě a buřty se opékaly u kulturní čekárny. Místní při té příležitosti uspořádali sbírku na novou ledničku do budovaného komunitního centra.</p>
+        <p>Komunitní centrum nebylo v době okrskové soutěže dokončené a pořádání by pro SDH Bor bylo komplikované, soutěž se proto konala v Mezném. SDH Mezné děkujeme, že se pořádání ujal a vyměnil si s námi termín. Počasí bylo proměnlivé, dokonce nás zastihla bouřka. SDH Bor se dále zúčastnil soutěže Dobrošovka Cup a v září Martinické osmy.</p>
+        <p>V červenci uspořádal sbor v čele s Pavlem Roškotem tábor Rudolecká padlinka 2023 – čtvrtý ročník. Bylo velmi teplo, a tak se děti koupaly v rybníce Olešňák; nechyběla návštěva jelení obory při krmení zvěře, tradiční Olympionáda a spousta her. Tábor finančně podporuje obec Nedrahovice, která na něj každoročně přispívá. Bez rodiny Roškotových by se ale neobešel: Hana Roškotová výborně vařila pro všechny účastníky, Petra Roškotová zajistila veškerý komfort a zázemí rodinného domu a Pavel se svým tatínkem Zdeňkem připravil soutěže a staral se o spokojenost všech táborníků, dětských i dospělých.</p>
+        <p>Začátkem července bylo komunitní centrum dokončeno. SDH Bor provedl terénní úpravy okolí včetně odvodu dešťové vody do pole. Nashromážděné špalky bylo nutné pořezat, naštípat a srovnat vedle krbu, aby se úpravy mohly dokončit. Truhlářství Pavla Roškota vyrobilo kuchyňskou linku a barový pult do sálu a Martina Peštová zajistila výhodný nákup stolů a židlí do sálu a šafinku.</p>
+        <p>Slavnostní otevření komunitního centra Bor proběhlo první zářijovou sobotu, 2. 9. 2023. Přítomni byli místopředsedkyně Poslanecké sněmovny Ing. Věra Kovářová, senátor Petr Štěpánek, starosta obce Nedrahovice Mgr. Čestmír Sosnovec a majitel společnosti S-B s.r.o. Ing. Jiří Barták. Pohoštění zajistil SDH Bor. Během programu zazněly díky společnosti S-B Barták, která stavbu provedla, i místním obyvatelům, kteří na stavbě odpracovali množství brigádnických hodin, a uznání od přítomných hostů. Borské děti připravily hudební program pod vedením Dany Liškové, Zdeněk a Štěpánka Havlíčkovi zahráli oblíbené melodie a mladší družstvo SDH Bor předvedlo ukázku hasičského sportu. Den zakončila večerní zábava.</p>
+        <p>Po hektickém roce si výbor opravdu zasloužil společné výjezdní zasedání, které proběhlo 27. 9. – 1. 10. 2023 na Moravě.</p>
+        <p>Po návratu bylo nutné nastěhovat do hasičárny veškeré použitelné vybavení, které bylo uskladněné v hospodářských staveních jednotlivých členů. Stěhování proběhlo o dvou víkendech, 14. a 21. 10. Dne 11. 11. 2023 byly nainstalovány radiátory a napojeny na otopnou soustavu. Kotel byl zprovozněn 9. 12. 2023, kdy se v něm poprvé zkušebně zatopilo – Mikuláš proto letos ještě obdaroval děti u kulturní čekárny.</p>
+        <p>V posledním měsíci roku se uskutečnila brigáda na prořezání větví, hrabání listí a úklid obce.</p>
+      </article>
+
+      <article class="kr-year" id="rok-2022" data-year="2022">
+        <h2 class="kr-num">2022</h2>
+        <p>Po odmlce předchozích let byl hasičský rok 2022 zahájen výroční schůzí, na které se zhodnotila činnost a výsledky za uplynulé roky.</p>
+        <p>Prvním jarním počinem sboru byla brigáda na prořez křovin podél cesty z Boru směrem k Jezerám. Vyčištěna byla i levá strana silnice směrem na Úklid, hlavně v úseku, kde se rozšiřovaly zpevněné plochy podél komunikace.</p>
+        <p>Dne 30. 4. 2022 byly v Boru upáleny všechny čarodějnice a vše se zapilo pivem a zajedlo opečenými buřty.</p>
+        <p>Po dvou letech bez soutěží se sbor 28. 5. 2022 zúčastnil noční soutěže Dobrošovka Cup jako přípravy na nadcházející sezónu. Soutěžila dvě dětská družstva – mladší i starší žáci obsadili shodně 5. místo. Ženy vybojovaly krásné 4. místo, muži nad 35 let byli sedmí. Noc byla značně mrazivá a na výkonech všech borských družstev bylo znát, že dva roky výcviku chybějí.</p>
+        <p>Okrskovou soutěž letos pořádal SDH Kamenice 4. 6. 2022. Počasí se celkem vydařilo, až na pár průtrží mračen, kvůli kterým byla soutěž přerušena. Soutěžilo 5 družstev mužů; v kategorii muži do 35 let Bor zástupce neměl. Muži nad 35 let obsadili krásné třetí místo ze čtyř družstev a borské ženy vybojovaly bronz. Děti nebyly rozděleny na mladší a starší a naše tři družstva skončila na 2., 4. a 8. místě z osmi.</p>
+        <p>Další soutěží dětských družstev byl 18. 6. 2022 Chobot Cup v Krasejovicích. Bylo úmorné vedro. Strojník Jiřík Neužil ml. měl poraněný kotník, a tak nám strojníka zapůjčil SDH Dobrošovice – Václava Cibulku mladšího. Mladší žáci (jediné borské družstvo v této kategorii) skončili druzí, starší žáci třetí. Všem patří velká gratulace k takovému zlepšení, a to ještě v tak spalujícím počasí.</p>
+        <p>Od 9. do 13. 7. 2022 proběhl už třetí ročník Rudolecké padlinky – soustředění dětských hasičů v Boru. Během pěti dnů děti absolvovaly kurz první pomoci a výlet do Počepic s minigolfem a obědem, plnily nejrůznější hry a úkoly a znovu jezdily na klouzačce – vodním toboganu, který byl letos ještě dokonalejší a delší. Navštívil nás kouzelník, kterého ocenily hlavně menší děti, a rodiče pro děti připravili olympiádu. Na závěr se vyhlásily nejlepší týmy a předaly medaile a ceny. Velké díky patří celé rodině Roškotových – už se těšíme na 4. ročník.</p>
+        <p>Dne 27. 8. 2022 byl slavnostně otevřen nový rybník nad Kamenicí – už třetí, za jehož výstavbou stojí nedrahovický starosta Čestmír Sosnovec. Slavnostní otevření pro něj bylo jen třešničkou na dortu. Programu se zúčastnili občané Nedrahovicka, hudebním hostem byla Štěpánka Balcarová, která zahrála vlastní skladby na trubku, a dalšími hosty byli 1. místopředsedkyně Poslanecké sněmovny Věra Kovářová a senátor Petr Štěpánek, bývalý starosta obce Petrovice. Občerstvení zajišťovaly sbory Nedrahovice, Kamenice a Bor. Počasí se vydařilo, děti se v novém rybníce koupaly a nedobrovolnému smočení neunikl nakonec ani starosta.</p>
+        <p>Hned další den jsme s jedním dětským družstvem vyrazili na soutěž do Počepic, kde nás čekalo deštivé počasí a naše první „N“ na soutěžích.</p>
+        <p>První zářijovou sobotu, 3. 9. 2022, se u hasičárny v Boru konalo tradiční opékání prasete, kterého se jako každý rok zúčastnila většina členů sboru a jejich rodin. Poprvé se letos konala „soutěž“ rodinných družstev v běhu s dětskými hadicemi; nejlépe si vedla rodina Skalických. Mohla by z toho být nová tradice.</p>
+        <p>Poslední soutěží sezóny byla 10. 9. 2022 Martinická osma v Martinicích. Dětem se konečně podařilo prolomit smůlu, která je na této soutěži provází – Bor A zvítězil a Bor B skončil pátý z pěti. Gratulujeme!</p>
+        <p>Opékání prasete bylo poslední akcí, která se u staré hasičárny konala. Starostovi obce Nedrahovice Mgr. Čestmíru Sosnovcovi se podařilo získat dotaci na výstavbu kulturního centra v Boru. Od 17. 9. 2022 se hasičárna vyklízela a bourala – zůstala jen zadní nosná stěna směrem ke krbu a oba štíty. Každou zářijovou sobotu se konala brigáda: bylo potřeba odstranit střechu a krov, zbourat přední stěnu, otlouct omítky, vybourat podlahu a další.</p>
+        <p>Výběrové řízení na stavbu kulturního centra vyhrála společnost STAVBA BARTÁK, která staveniště převzala 18. 10. 2022. Díky mírné zimě práce postupovaly velmi slibně. Brigády členů SDH pokračovaly až do konce listopadu.</p>
+        <p>Kvůli stavbě se mikulášská besídka konala na návsi u společenské čekárny. Jirka Neužil připravil pořádné peklo se sudy s ohněm, ženy ozdobily okolí lampiony a Mikuláš se svou věrnou družinou mohl přijít. Bylo připravené teplé občerstvení, všichni se dobře bavili a děti byly z nadílky nadšené.</p>
+        <p>Dne 10. 12. 2022 proběhla poslední brigáda roku na úklid obce. Listí se hrabalo i se sněhem, který letos přišel brzy. Ořezaly se také větve u příjezdu k hasičárně, aby mohlo projet auto s vazníky na střechu kulturního centra.</p>
+        <p>Kolem Štědrého dne přišla obleva a teploty kolem 15 °C vydržely až do Silvestra, a tak se příchod roku 2023 slavil opět venku u společenské čekárny.</p>
+      </article>
+
+      <article class="kr-year" id="rok-2021" data-year="2021">
+        <h2 class="kr-num">2021</h2>
+        <p>Rok 2021 nezačal tradiční výroční schůzí SDH Bor – kvůli nepříznivému vývoji pandemie nebylo povoleno shromažďování většího počtu lidí. Školy byly od začátku roku otevřené jen pro žáky 1. a 2. tříd, začátkem března se zavřely pro všechny. Od 1. dubna se žáci začali postupně vracet do základních škol a 24. dubna se otevřely všechny školy, základní i střední.</p>
+        <p>V únoru uspořádali dobrovolní hasiči karneval, hlavně pro dětská družstva. Sál byl slavnostně vyzdobený balónky a papírovými konfetami, pro účastníky bylo připraveno malé pohoštění a nechyběla aparatura na oblíbené písničky pro malé i velké tanečníky ani diskokoule. Hasičárna se zaplnila malými čarodějnicemi, vílami, princeznami a nejrůznějšími bojovníky.</p>
+        <p>Vítání jara nemohlo proběhnout jako obvykle ve škole, a tak si děti vynášení Morany uspořádaly samy. Smrtka byla strašlivá a nechtělo se jí uvolnit místo jaru – v korytě Libíňského potoka se držela zuby nehty.</p>
+        <p>Dne 24. 4. 2021 proběhla brigáda na pořezání dřeva kolem rybníka U Mošničků. Vykácely se nálety a prořezaly suché větve podél rybníka, takže se místo krásně prosvětlilo a vypadá úhledněji. Obec vyčistila odtok z Jezer do Boru: pod silnicí byly osazeny nové vodovodní trubky a vyčistil se přívodní příkop. Kvůli jeho velkému zahloubení bylo nutné vybudovat dvě čisticí šachty.</p>
+        <p>Na konci dubna došlo jako každý rok na pálení čarodějnic. Vatra vzplála velkolepými plameny díky zásobě větví z prořezávky u rybníka U Mošničků a u hasičárny proběhlo tradiční opékání buřtů.</p>
+        <p>Na začátku letních prázdnin se opět u Pavla Roškota na Rudolci konal 2. ročník dětského hasičského soustředění. Program zahájil středeční nástup, na kterém si děti vylosovaly barevné náramky a podle barev se rozdělily do oddílů. Hned po nástupu se přehnala průtrž mračen a s hrůzou jsme sledovali, jak stoupá hladina Libíňského potoka – louka se stany se ocitla zčásti pod vodou. Další dny se počasí umoudřilo, i když přeháňky nás neminuly.</p>
+        <p>Hrály se nejrůznější hry; velký úspěch mělo splouvání potoka na nafukovacích matracích od propustku k dřevěnému mostku i vodní skluzavka. Hlavním hostem tábora byla skupina sokolníků z Prahy, která přivezla několik dravců a připravený program. Celodenní výlet tentokrát vedl do Sedlčan, kde byla hlavním bodem návštěva prodejny zemědělské techniky – tu si užili hlavně kluci.</p>
+        <p>První zářijovou sobotu proběhlo pečení hasičského prasete – příležitost k setkání všech obyvatel osady a jejich rodin při příjemném povídání. Během dne se zároveň konala brigáda na sběr železného odpadu; velké kusy ze sběrného kontejneru byly naloženy a odvezeny do sběrného dvora.</p>
+        <p>Na podzim se pandemie koronaviru znovu zhoršila, děti nechodily do školy a probíhala distanční výuka.</p>
+        <p>Pod obcí Nedrahovice, podél silnice do Sedlce-Prčice, proběhla brigáda na kácení vzrostlých stromů, které se zúčastnili muži i ženy ze sboru. Nechybělo ani už klasické hrabání listí kolem kapličky, na dětském hřišti a kolem popelnic.</p>
+        <p>I přes pandemii na borské děti nezapomněl Mikuláš s čerty a obdaroval je bohatou nadílkou.</p>
+      </article>
+
+      <article class="kr-year" id="rok-2020" data-year="2020">
+        <h2 class="kr-num">2020</h2>
+        <p>Začátkem března proběhla brigáda v osadě Bor. Brigádníci se rozdělili do dvou skupin: první kácela suché stromy podél cesty k „Čarodějnicím“, druhá čistila vzrostlé keře podél silnice z Boru do Úklidu. Bylo mrazivo a poletoval sníh. Rozhovory se točily hlavně kolem nové nemoci covid-19, která se šířila z Číny do celého světa.</p>
+        <p>Od 11. března byl nový koronavirus veden jako pandemie. Vládní opatření omezila veškeré společenské akce a zakázala shromažďování. SDH Bor proto letos nepořádal žádnou ze svých obvyklých akcí, jako je dětský den nebo zábava, a nezúčastnil se ani žádné hasičské soutěže. Pálení čarodějnic se uskutečnilo týden po obvyklém termínu, 7. 5. 2020, a bez doprovodného programu.</p>
+        <p>V průběhu roku se Pavlu Roškotovi zrodil nápad uspořádat pro dětské členy sboru letní soustředění – malý hasičský tábor. Pavel nabídl svou zahradu, kuchyň a sociální zázemí. Na louce u Libíňského potoka vyrostlo několik stanů, ve kterých bydlely celé rodiny nebo jen dětští členové. Slavnostní zahájení proběhlo ve středu 15. 7. 2020 po 18. hodině. Zúčastnilo se celkem 20 dětí ve věku od 3 do 14 let. Na programu byly výlety, nácvik hasičského zásahu a hry.</p>
+        <p>V pátek podvečer předvedla pozvaná šermířská skupina Corpus Bellatores rytířský souboj a děti si pak mohly vyzkoušet dobové brnění, zbraně, střelbu z luku a hod nožem. Zářivou tečkou za vystoupením byla večerní ohňová show. Druhý den čekalo děti překvapení – kynologické představení u rybníka Olešňák. Základní kynologická organizace Sedlčany předvedla základní výcvik psů a jako specialitu záchranu tonoucího. Setkání se psy bylo pro děti velkým zážitkem, umocněným jízdou k rybníku na valníku za traktorem. Soustředění provázely přeháňky a poměrně nízké teploty, přesto lze akci označit za zdařilou.</p>
+        <p>Na podzim proběhla brigáda na kácení vzrostlých stromů pod obcí Nedrahovice u hlavní silnice na Úklid a několik brigád na hrabání listí v obci.</p>
+        <p>Kvůli pandemii byly školy v roce 2020 zavřené od 11. března do začátku května. Ve školním roce 2020/21 se znovu zavřely 14. 10. 2020 a děti se začaly vracet během listopadu. Kvůli nepříznivému vývoji pandemie se na konci roku nekonala ani výroční schůze.</p>
+        <p>Mikulášskou besídku, tradičně pořádanou v hasičárně 5. 12. 2020, si i přes nepříznivou situaci nenechalo ujít asi 20 dětí z Boru.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer style="width:100%;background:var(--navy-900);margin-top:auto;">
+    <div style="max-width:1280px;margin:0 auto;padding:40px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="mono" style="color:var(--ivory-dim);font-size:12px;">SDH BOR U SEDLČAN © 1906–2026 · IČO 66325366 · Spolkový rejstřík L 33853 vedený Městským soudem v Praze</div>
+      <a href="index.html" style="color:var(--ivory-dim);font-size:13px;border-bottom:2px solid var(--ochre-500);padding-bottom:2px;">Zpět na úvod</a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var chips = document.querySelectorAll('#kr-filters button');
+    var years = document.querySelectorAll('.kr-year');
+    function show(y, push) {
+      chips.forEach(function (c) { c.classList.toggle('active', c.getAttribute('data-year') === y); });
+      years.forEach(function (a) { a.classList.toggle('hidden', !(y === 'all' || a.getAttribute('data-year') === y)); });
+      if (push) history.replaceState(null, '', y === 'all' ? location.pathname : '#rok-' + y);
+    }
+    chips.forEach(function (c) { c.addEventListener('click', function () { show(c.getAttribute('data-year'), true); }); });
+    var m = location.hash.match(/^#rok-(\d{4})$/);
+    if (m && document.getElementById('rok-' + m[1])) show(m[1], false);
+  })();
+</script>
+<script src="js/menu.js"></script>
+</body>
+</html>
