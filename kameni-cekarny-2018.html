@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>SDH Bor u Sedlčan — Odvoz a třídění kamenů 2018</title>
 <link rel="icon" type="image/png" href="images/logo/favicon.png">
+<link rel="stylesheet" href="css/mobile.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -44,7 +45,7 @@
 
   <!-- Utility bar -->
   <div style="width:100%;background:var(--navy-900);">
-    <div style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
+    <div class="util-bar" style="max-width:1280px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;">
       <div class="mono" style="color:var(--ivory-dim);font-size:12px;">Bor 3, Nedrahovice 264 01</div>
       <a href="mailto:sdh.bor.nedrahovice@gmail.com" class="mono" style="color:var(--ivory-dim);font-size:12px;">sdh.bor.nedrahovice@gmail.com</a>
     </div>
@@ -60,6 +61,7 @@
           <span class="mono" style="color:var(--ivory-dim);font-size:12px;">U SEDLČAN</span>
         </span>
       </a>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav style="display:flex;gap:28px;align-items:center;">
         <a href="index.html" class="navlink">Úvod</a>
         <a href="historie.html" class="navlink">Historie</a>
@@ -149,5 +151,6 @@
   </footer>
 
 </div>
+<script src="js/menu.js"></script>
 </body>
 </html>
