@@ -5,6 +5,14 @@
   var grids = document.querySelectorAll('.gallery-grid');
   if (!grids.length) return;
 
+  /* Styl je přímo ve skriptu, aby nezávisel na verzi css/mobile.css v cache */
+  if (!document.getElementById('galerie-css')) {
+    var st = document.createElement('style');
+    st.id = 'galerie-css';
+    st.textContent = "/* Fotogalerie – zarovnané řady (js/galerie.js) */\n.gallery-grid.gj{display:block;position:relative;}\n.gallery-grid.gj > a{position:absolute;display:block;box-sizing:border-box;padding:3px;background:#0A121D;border-radius:3px;overflow:hidden;cursor:zoom-in;}\n.gallery-grid.gj > a img{width:100%;height:100%;object-fit:cover;display:block;border-radius:1px;transition:transform .35s,filter .35s;}\n.gallery-grid.gj > a:hover img{transform:scale(1.04);filter:brightness(1.08);}\n.gallery-grid.gj > a:focus-visible{outline:2px solid #D98A2B;outline-offset:2px;}\n\n/* Prohlížeč fotek */\n.gl-box{position:fixed;inset:0;z-index:1000;background:rgba(6,11,18,.95);display:none;align-items:center;justify-content:center;}\n.gl-box.on{display:flex;}\n.gl-box figure{margin:0;display:flex;flex-direction:column;align-items:center;padding:0 72px 84px;}\n.gl-box figure img{max-width:calc(100vw - 144px);max-height:calc(100vh - 150px);object-fit:contain;border:3px solid #0A121D;border-radius:3px;box-shadow:0 10px 40px rgba(0,0,0,.5);}\n.gl-box figcaption{color:#B9C0C9;font:500 13px 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;margin-top:12px;text-align:center;}\n.gl-box figcaption b{color:#E7A652;font-weight:600;}\n.gl-box button{position:absolute;width:48px;height:48px;border-radius:50%;background:rgba(243,238,226,.08);border:1px solid rgba(243,238,226,.2);color:#F3EEE2;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}\n.gl-box button:hover,.gl-box button:focus-visible{background:rgba(217,138,43,.4);outline:none;}\n.gl-x{top:16px;right:16px;font-size:20px !important;}\n.gl-prev{left:16px;top:50%;transform:translateY(-50%);}\n.gl-next{right:16px;top:50%;transform:translateY(-50%);}\n.gl-strip{position:absolute;bottom:12px;left:0;right:0;display:flex;gap:6px;overflow-x:auto;padding:0 16px;scrollbar-width:none;}\n.gl-strip::-webkit-scrollbar{display:none;}\n.gl-strip img{height:46px;width:auto;flex:none;border-radius:2px;opacity:.45;cursor:pointer;border:2px solid transparent;}\n.gl-strip img.cur{opacity:1;border-color:#D98A2B;}\n.gl-strip img:first-child{margin-left:auto;}\n.gl-strip img:last-child{margin-right:auto;}\n@media (max-width:600px){\n  .gl-box figure{padding:0 0 130px;}\n  .gl-box figure img{max-width:100vw;max-height:calc(100vh - 210px);border-width:0;border-radius:0;}\n  .gl-prev,.gl-next{top:auto;bottom:70px;transform:none;}\n  .gl-strip img{height:38px;}\n}";
+    document.head.appendChild(st);
+  }
+
   var GAP = 6;
 
   function ratio(img) {
