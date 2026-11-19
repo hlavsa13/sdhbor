@@ -50,8 +50,9 @@
   .card{background:#FFFFFF;border:1px solid #E4DCC9;}
   .section-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.14em;color:var(--ochre-500);text-transform:uppercase;}
   @media (max-width:900px){ .br-desk{display:none;} }
-  .news-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:24px;}
-  @media (max-width:900px){ .news-grid{grid-template-columns:1fr;} }
+  .news-grid{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:20px;}
+  @media (max-width:1100px){ .news-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:640px){ .news-grid{grid-template-columns:1fr;} }
   .news-card{box-shadow:0 1px 3px rgba(10,18,29,0.08);display:flex;flex-direction:column;border-radius:2px;overflow:hidden;transition:border-color .15s;}
   .news-card:hover{border-color:var(--ochre-500);}
   .news-card:hover .news-more{color:var(--ochre-500);}
@@ -124,7 +125,7 @@
     </div>
   </section>
 
-  <!-- Novinky (poslední 3 akce a soutěže) -->
+  <!-- Novinky (poslední 4 akce a soutěže) -->
   <section id="novinky" style="width:100%;background:var(--sand);border-top:4px solid var(--ochre-500);">
     <div style="max-width:1280px;margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;gap:36px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
@@ -138,6 +139,15 @@
         </div>
       </div>
       <div class="news-grid">
+        <a href="svatba-hasicarna-2026.html" class="card news-card">
+          <img src="images/svatba-hasicarna-2026/6.jpg" alt="Vyzdobená hasičárna na svatební hostinu" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+            <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:var(--ochre-500);">14. 11. 2026 · AKCE</div>
+            <h3 style="font-size:19px;color:var(--navy-900);">Svatba v hasičárně</h3>
+            <p style="font-size:14px;line-height:1.6;color:#5A5140;margin:0;flex:1;">Svatební hostina v naší hasičárně. Vyzdobený sál, bar a zázemí připravené pro hosty.</p>
+            <span class="mono news-more" style="font-size:12px;font-weight:600;color:var(--navy-900);margin-top:6px;">Detail →</span>
+          </div>
+        </a>
         <a href="stavba-pristresku-2026.html" class="card news-card">
           <img src="images/stavba-pristresku-2026/24.jpg" alt="Dokončený přístřešek na dřevo u hasičárny" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">
           <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;">
