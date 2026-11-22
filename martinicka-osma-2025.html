@@ -46,6 +46,9 @@
   .btn-primary:hover{background:var(--ochre-400);}
   .results-grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:24px;}
   @media (max-width:640px){ .results-grid{grid-template-columns:1fr;} }
+  .gallery-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px;align-items:start;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:480px){ .gallery-grid{grid-template-columns:1fr;} }
 </style>
 
 <div style="width:100%;min-height:100vh;background:var(--ivory);display:flex;flex-direction:column;">
@@ -105,41 +108,87 @@
   <!-- Výsledky -->
   <section style="width:100%;background:var(--navy-800);">
     <div style="max-width:900px;margin:0 auto;padding:56px 32px;display:flex;flex-direction:column;gap:28px;">
-      <div class="section-label">Výsledky SDH Bor</div>
+      <div class="section-label">Výsledky</div>
       <div class="results-grid">
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <h3 style="color:var(--ivory);font-size:17px;">Mladší děti</h3>
+          <h3 style="color:var(--ivory);font-size:17px;">Děti</h3>
           <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <span style="color:var(--ivory);font-size:14px;">SDH Bor</span>
-            <span class="win-tag">1. místo</span>
+            <span style="color:var(--ochre-400);font-size:14px;font-weight:600;">1. SDH Bor ml.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="win-tag">1. místo</span><span class="mono" style="color:var(--ivory-dim);font-size:12px;">18,92 · 23,65</span></span>
           </div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <h3 style="color:var(--ivory);font-size:17px;">Starší děti</h3>
           <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <span style="color:var(--ivory);font-size:14px;">SDH Bor</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:12px;">3. místo</span>
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">2. Dobrošovice st.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">22,28 · 19,22</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ochre-400);font-size:14px;font-weight:600;">3. SDH Bor st.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">23,69 · N</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">4. Dobrošovice ml.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">24,38 · 26,37</span></span>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <h3 style="color:var(--ivory);font-size:17px;">Ženy</h3>
           <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <span style="color:var(--ivory);font-size:14px;">SDH Bor</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:12px;">3. místo</span>
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">1. Rovina</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">25,01 · 23,45</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">2. Dobrošovice</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">27,37 · 27,35</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ochre-400);font-size:14px;font-weight:600;">3. SDH Bor</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">31,23 · NP</span></span>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <h3 style="color:var(--ivory);font-size:17px;">Muži</h3>
+          <h3 style="color:var(--ivory);font-size:17px;">Muži PS 12</h3>
           <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <span style="color:var(--ivory);font-size:14px;">SDH Bor</span>
-            <span class="mono" style="color:var(--ivory-dim);font-size:12px;">5. místo</span>
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">1. Dobrošovice ml.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">29,65 · 19,88</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">2. Dobrošovice st.</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">21,85 · 25,80</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">3. Velké Heřmanice</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">40,56 · 24,65</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ivory);font-size:14px;font-weight:400;">4. Sušetice</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">30,32 · 25,16</span></span>
+          </div>
+          <div class="plate" style="border-radius:2px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="color:var(--ochre-400);font-size:14px;font-weight:600;">5. SDH Bor</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex-shrink:0;"><span class="mono" style="color:var(--ivory-dim);font-size:12px;">31,07 · 25,38</span></span>
           </div>
         </div>
       </div>
+      <p class="mono" style="color:var(--ivory-dim);font-size:12px;margin:0;">Uvedeny časy 1. a 2. pokusu, rozhoduje lepší z nich. N – neplatný pokus, NP – bez platného času.</p>
     </div>
   </section>
 
-  <!-- Fotogalerie placeholder -->
+  <!-- Fotogalerie -->
+  <section style="width:100%;background:var(--ivory);">
+    <div style="max-width:1100px;margin:0 auto;padding:0 32px 64px;display:flex;flex-direction:column;gap:16px;">
+      <div class="section-label">Fotogalerie · 3 fotografie</div>
+      <div class="gallery-grid">
+        <a href="images/martinicka-osma-2025/1.jpg" target="_blank" rel="noopener" class="plate" style="border-radius:2px;padding:8px;display:block;">
+          <img src="images/martinicka-osma-2025/1.jpg" alt="Martinická osma 2025 — foto 1" width="1280" height="516" loading="lazy" style="width:100%;height:auto;display:block;">
+        </a>
+        <a href="images/martinicka-osma-2025/2.jpg" target="_blank" rel="noopener" class="plate" style="border-radius:2px;padding:8px;display:block;">
+          <img src="images/martinicka-osma-2025/2.jpg" alt="Martinická osma 2025 — foto 2" width="1280" height="1014" loading="lazy" style="width:100%;height:auto;display:block;">
+        </a>
+        <a href="images/martinicka-osma-2025/3.jpg" target="_blank" rel="noopener" class="plate" style="border-radius:2px;padding:8px;display:block;">
+          <img src="images/martinicka-osma-2025/3.jpg" alt="Martinická osma 2025 — foto 3" width="1086" height="1260" loading="lazy" style="width:100%;height:auto;display:block;">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer (shared) -->
   <footer style="width:100%;background:var(--navy-900);margin-top:auto;">
@@ -151,5 +200,6 @@
 
 </div>
 <script src="js/menu.js"></script>
+<script src="js/galerie.js?v=2"></script>
 </body>
 </html>
